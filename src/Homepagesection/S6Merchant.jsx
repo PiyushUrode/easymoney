@@ -7,17 +7,23 @@ import f2 from "../assets/features/f2.png";
 import f3 from "../assets/features/f3.png";
 import f4 from "../assets/features/f4.png";
 
+import b1 from "../assets/features/b1.png"
+import b2 from "../assets/features/b2.png"
+import b3 from "../assets/features/b3.png"
+import b4 from "../assets/features/b4.png"
+import b5 from "../assets/features/b5.png"
+
 const S6Merchant = () => {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
 
   const forWhomItems = [
-    { label: "Online businesses", icon: "📅" },
-    { label: "Utility & recharge apps", icon: "🧱" },
-    { label: "Marketplaces", icon: "📏" },
-    { label: "Platforms needing sub-merchant", icon: "🚀" },
-    { label: "Digital wallet providers", icon: "💳" },
+    { label: "Online businesses",       img: b1, },
+    { label: "Utility & recharge apps",       img: b2, },
+    { label: "Marketplaces",       img: b3, },
+    { label: "Platforms needing sub-merchant", img: b4, },
+    { label: "Digital wallet providers", img: b5, },
   ];
 
   const features = [
@@ -46,26 +52,26 @@ const S6Merchant = () => {
         For Whom:
       </h2>
 <ul
-  className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-12 w-full"
+  className="flex flex-row justify-center items-center align-middle flex-wrap gap-x-20 gap-y-10 pb-10 max-w-6xl mx-auto"
   data-aos="fade-up"
 >
   {forWhomItems.map((item, index) => (
     <li
-      key={index}
-      data-aos="zoom-in"
-      data-aos-delay={index * 100}
-      className="bg-white text-blue-900 px-6 py-6 rounded-xl flex justify-center align-middle text-center items-center gap-3 shadow-md hover:shadow-lg transition-all duration-300"
-    >
-      <span
-        aria-hidden="true"
-        className="text-3xl md:text-4xl text-blue-800"
-      >
-        {item.icon}
-      </span>
-      <span className="text-lg md:text-xl font-medium">
-        {item.label}
-      </span>
-    </li>
+  key={index}
+  data-aos="zoom-in"
+  data-aos-delay={index * 100}
+  className="bg-white text-blue-900 px-6 py-6 rounded-xl flex justify-center align-middle text-center items-center gap-3 shadow-md hover:shadow-lg transition-all duration-300"
+>
+  <img
+    src={item.img}
+    alt={item.label}
+    className="w-10 h-10 object-contain"
+  />
+  <span className="text-lg md:text-xl font-medium">
+    {item.label}
+  </span>
+</li>
+
   ))}
 </ul>
 
