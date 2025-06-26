@@ -15,7 +15,7 @@ const S4About = () => {
   return (
     <section>
       {/* Top Section */}
-      <div className="bg-[#0080011A] pt-6 md:pt-12 pb-6">
+      <div className="bg-[#0080011A] pt-6 md:pt-12 pb-6" id='about'>
         <div className="max-w-7xl mx-auto">
 
           {/* ABOUT US Title */}

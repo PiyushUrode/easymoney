@@ -40,7 +40,7 @@ const S6Merchant = () => {
   ];
 
   return (
-    <section className="bg-blue-900 text-white py-10 md:py-20 px-10 lg:px-20 min-h-screen">
+    <section className="bg-blue-900 text-white py-10 md:py-20 px-10 lg:px-20 min-h-screen" id="merchant"> 
       {/* Section: For Whom */}
       <h2 className="text-2xl font-bold mb-6 text-white" data-aos="fade-down">
         For Whom:

@@ -26,7 +26,7 @@ const S7DeveloperApi = () => {
   ];
 
   return (
-    <section className="bg-white text-center px-4 py-12 min-h-screen">
+    <section className="bg-white text-center px-4 py-12 min-h-screen" id="dev">
       <h2
         className="text-[14px] md:text-[16px] font-bold uppercase text-[#042D61] mb-2 tracking-wide"
         data-aos="fade-down"

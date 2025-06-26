@@ -93,7 +93,7 @@ const S5Service = () => {
   );
 
   return (
-    <div className="bg-white py-12 px-4 font-sans flex flex-col items-center justify-center">
+    <div className="bg-white py-12 px-4 font-sans flex flex-col items-center justify-center" id='service'>
       <div className="text-center mb-12">
         <h2 className=" text-2xl md:text-4xl font-extrabold mb-4 tracking-wide">
           SERVICES

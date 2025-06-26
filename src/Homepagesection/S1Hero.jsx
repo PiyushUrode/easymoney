@@ -3,7 +3,7 @@ import heroimg from "../assets/hero/hero1.png";
 
 const S1Hero = () => {
   return (
-    <headers className="bg-[#042D61] py-0  flex flex-col-reverse  md:flex-row py-10  md:pt-24 px-3 md:px-10 justify-end">
+    <headers className="bg-[#042D61] py-0  flex flex-col-reverse  md:flex-row py-10  md:pt-24 px-3 md:px-10 justify-end" id="home">
         
         {/* Left Content */}
         <div className="w-full md:w-[40%]  flex flex-col justify-center ">

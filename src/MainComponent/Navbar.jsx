@@ -152,7 +152,7 @@ const Navbar = () => {
             </li>
 
             <li className="md:border-none border-b-[2px] border-[#008001]">
-              <Link smooth to="/#usecase" onClick={closeMenu}>
+              <Link smooth to="/#service" onClick={closeMenu}>
                 <div
                   className="font-normal block py-2 px-3  text-black font-semibold  hover:bg-gray-700 md:hover:bg-transparent md:p-0  hover:border-b-2 hover:border-[#008001] transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100  duration-300 
  font-outfit"
@@ -163,7 +163,7 @@ const Navbar = () => {
             </li>
 
             <li className="md:border-none border-b-[2px] border-[#008001] ">
-              <Link smooth to="/#token" onClick={closeMenu}>
+              <Link smooth to="/#merchant" onClick={closeMenu}>
                 <div
                   // onClick={togglePopup}
                   className="font-normal block py-2 px-3 text-black font-semibold  hover:bg-gray-700 md:hover:bg-transparent md:p-0  hover:border-b-2 hover:border-[#008001] transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100  duration-300 
@@ -175,7 +175,7 @@ const Navbar = () => {
             </li>
 
             <li className="md:border-none border-b-[2px] border-[#008001]">
-              <Link smooth to="/#roadmap" onClick={closeMenu}>
+              <Link smooth to="/#dev" onClick={closeMenu}>
                 <div
                   className="font-normal block py-2 px-3 text-black font-semibold  hover:bg-gray-700 md:hover:bg-transparent md:p-0  hover:border-b-2 hover:border-[#008001] transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100  duration-300 
  font-outfit"
@@ -186,7 +186,7 @@ const Navbar = () => {
             </li>
 
             <li className="md:border-none border-b-[2px] border-[#008001]">
-              <Link smooth to="/#roadmap" onClick={closeMenu}>
+              <Link smooth to="/#contact" onClick={closeMenu}>
                 <div
                   className="font-normal block py-2 px-3 text-black font-semibold  hover:bg-gray-700 md:hover:bg-transparent md:p-0  hover:border-b-2 hover:border-[#008001] transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100  duration-300 
  font-outfit"
@@ -196,21 +196,7 @@ const Navbar = () => {
               </Link>
             </li>
 
-            <li className="md:border-none  md:hidden border-b-[2px] border-[#008001]">
-              <a
-                target="blank"
-                href="https://orbits-token.gitbook.io/orbits-token/"
-                rel="noopener noreferrer"
-                onClick={closeMenu}
-              >
-                <div
-                  className="font-normal block py-2 px-3 text-black font-semibold  hover:bg-gray-700 md:hover:bg-transparent md:p-0  hover:border-b-2 hover:border-[#008001] transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100  duration-300 
- font-outfit"
-                >
-                  Whitepaper
-                </div>
-              </a>
-            </li>
+
           </ul>
         </div>
       </div>

@@ -8,7 +8,7 @@ const S8ContactForm = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#00800010] px-4 py-8 md:px-16 lg:px-32 flex flex-col md:gap-12">
+    <div className="min-h-screen bg-[#00800010] px-4 py-8 md:px-16 lg:px-32 flex flex-col md:gap-12" id="contact">
       {/* Title Section */}
       <div
         className="flex flex-col items-center text-center"

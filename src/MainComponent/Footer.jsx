@@ -68,8 +68,8 @@ EverSafePay is a full-stack payment facilitator platform designed for modern bus
       </h2>
       <ul className="text-gray-400 font-medium flex flex-col gap-3 text-sm  lg:text-lg">
         <li className="text-center md:text-left"><a href="#about">About Us</a></li>
-        <li className="text-center md:text-left"><a href="#usecase">Service  </a></li>
-        <li className="text-center md:text-left"><a href="#roadmap">Merchant </a></li>
+        <li className="text-center md:text-left"><a href="#service">Service  </a></li>
+        <li className="text-center md:text-left"><a href="#merchant">Merchant </a></li>
       </ul>
     </div>
 
@@ -79,8 +79,8 @@ EverSafePay is a full-stack payment facilitator platform designed for modern bus
         About Us
       </h2>
       <ul className="text-gray-400 font-medium flex flex-col gap-3 text-sm  lg:text-lg">
-        <li className="text-center md:text-left"> <a  href="">Developer </a></li>
-        <li className="text-center md:text-left"><a href=""> Contact Us </a></li>
+        <li className="text-center md:text-left"> <a  href="#dev">Developer </a></li>
+        <li className="text-center md:text-left"><a href="#contact"> Contact Us </a></li>
       </ul>
     </div>
 
