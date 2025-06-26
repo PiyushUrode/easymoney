@@ -40,7 +40,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`w-full     overflow-x-hidden z-0    top-0 border-b border-none dark:border-gray-600 `}
+      className={`w-full     overflow-x-hidden z-0  bg-white  top-0 border-b border-none dark:border-gray-600 `}
     >
       <div className="relative max-w-full flex flex-wrap items-center justify-between mx-auto p-4 px-4 md:p-4 md:px-8">
         {/* Logo */}
