@@ -1,14 +1,15 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Helmet } from 'react-helmet';
 
-import d1 from "../assets/dev/d1.png";
-import d2 from "../assets/dev/d2.png";
-import d3 from "../assets/dev/d3.png";
-import d4 from "../assets/dev/d4.png";
-import d5 from "../assets/dev/d5.png";
-import d6 from "../assets/dev/d6.png";
-import d7 from "../assets/dev/d7.png";
+import d1 from "../assets/dev/d1.webp";
+import d2 from "../assets/dev/d2.webp";
+import d3 from "../assets/dev/d3.webp";
+import d4 from "../assets/dev/d4.webp";
+import d5 from "../assets/dev/d5.webp";
+import d6 from "../assets/dev/d6.webp";
+import d7 from "../assets/dev/d7.webp";
 
 const S7DeveloperApi = () => {
   useEffect(() => {
@@ -26,6 +27,15 @@ const S7DeveloperApi = () => {
   ];
 
   return (
+
+<>  
+
+    <Helmet>
+  <title>EverSafePay Developer API Kit – Integrate Pay-in, Payouts, Onboarding</title>
+  <meta name="description" content="Explore RESTful APIs for merchant onboarding, transactions, refunds, and payouts. Full documentation, webhooks, and sandbox access." />
+  <meta name="keywords" content="developer API kit, EverSafePay API, payment integration, REST API, webhook, sandbox, API key" />
+</Helmet>
+
     <section className="bg-white text-center px-4 py-12 " id="dev">
       <h2
         className="text-[14px] md:text-[16px] font-bold uppercase text-[#042D61] mb-2 tracking-wide"
@@ -62,6 +72,9 @@ const S7DeveloperApi = () => {
         ))}
       </div>
     </section>
+
+
+    </>
   );
 };
 

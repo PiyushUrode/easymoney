@@ -1,6 +1,7 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
+import { Helmet } from 'react-helmet';
 
 import serv1 from "../assets/service/1payin.webp";
 import serv2 from "../assets/service/2payout.webp";
@@ -93,6 +94,16 @@ const S5Service = () => {
   );
 
   return (
+
+    <>  
+    <Helmet>
+  <title>EverSafePay Services – Pay-in, Payouts, Merchant Dashboards & More</title>
+  <meta name="description" content="Comprehensive services: Pay-in solutions, instant payouts, dashboards, APIs, KYC, and developer tools to power modern digital payments." />
+  <meta name="keywords" content="payment services, pay-in, payout, KYC engine, developer APIs, EverSafePay services, merchant dashboard" />
+</Helmet>
+
+    
+
     <div className="bg-white py-12 px-4 font-sans flex flex-col items-center justify-center" id='service'>
       <div className="text-center mb-12">
         <h2 className=" text-2xl md:text-4xl font-extrabold mb-4 tracking-wide">
@@ -152,6 +163,8 @@ const S5Service = () => {
         <div className="custom-pagination absolute -bottom-6 left-0 right-0 flex justify-center z-10" />
       </div>
     </div>
+
+        </>
   );
 };
 

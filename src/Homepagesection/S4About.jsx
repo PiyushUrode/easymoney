@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import { Helmet } from 'react-helmet';
+
 
 const S4About = () => {
   useEffect(() => {
@@ -13,6 +15,14 @@ const S4About = () => {
   }, []);
 
   return (
+
+    <>   
+    <Helmet>
+  <title>About EverSafePay – India's Trusted Payment Facilitator</title>
+  <meta name="description" content="EverSafePay is a next-generation PayFac offering secure, scalable payment infrastructure including onboarding, APIs, and merchant dashboards." />
+  <meta name="keywords" content="About EverSafePay, payment facilitator India, digital payments company, merchant support, onboarding payments" />
+</Helmet>
+
     <section>
       {/* Top Section */}
       <div className="bg-[#0080011A] pt-6 md:pt-12 pb-6" id='about'>
@@ -88,6 +98,7 @@ const S4About = () => {
         </div>
       </div>
     </section>
+    </>
   )
 }
 

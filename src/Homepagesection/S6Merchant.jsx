@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Helmet } from 'react-helmet';
+
 
 import f1 from "../assets/features/f1.png";
 import f2 from "../assets/features/f2.png";
@@ -46,6 +48,15 @@ const S6Merchant = () => {
   ];
 
   return (
+
+
+<>
+<Helmet>
+  <title>Merchant Payment Solutions – Onboarding, Compliance, Settlement Tools</title>
+  <meta name="description" content="Solutions for online businesses, platforms, and aggregators. Offer branded dashboards, digital onboarding, payouts, and compliance tools." />
+  <meta name="keywords" content="merchant onboarding, sub-merchant platforms, branded dashboard, payouts, settlement tools, compliance" />
+</Helmet>
+
     <section className="bg-blue-900 text-white py-10 md:py-20 px-10 lg:px-20 " id="merchant"> 
       {/* Section: For Whom */}
       <h2 className="text-2xl font-bold mb-6 text-white" data-aos="fade-down">
@@ -99,6 +110,10 @@ const S6Merchant = () => {
         ))}
       </div>
     </section>
+
+</>
+
+
   );
 };
 

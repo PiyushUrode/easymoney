@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+
 const useCasesRow1 = ["Retailers", "Aggregators", "SaaS", "D2C Brands"];
 const useCasesRow2 = ["NBFCs", "Gaming", "Travel", "Utility Platforms"];
 
