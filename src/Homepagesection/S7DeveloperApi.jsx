@@ -36,7 +36,7 @@ const S7DeveloperApi = () => {
   <meta name="keywords" content="developer API kit, EverSafePay API, payment integration, REST API, webhook, sandbox, API key" />
 </Helmet>
 
-    <section className="bg-white text-center px-4 py-12 " id="dev">
+    <section className="bg-white text-center px-4 py-12 " id="developer">
       <h2
         className="text-[14px] md:text-[16px] font-bold uppercase text-[#042D61] mb-2 tracking-wide"
         data-aos="fade-down"

@@ -94,7 +94,7 @@ const Navbar = () => {
         {/* Navbar Items */}
         <div id="navbar-sticky1" className={`items-center justify-center w-[100%] md:flex md:w-fit md:order-1 ${isNavVisible ? "block" : "hidden"}`} data-aos="fade-down" data-aos-delay="300">
           <ul className="navcar flex flex-col p-4 md:py-1.5 mt-5 bg-[#042D61] sm:bg-white font-medium border border-[#00C6FF] md:rounded-[50px] rounded-lg md:space-x-[3vmax] md:flex-row md:mt-0 md:border-0 font-semibold tablet:bg-gray-900">
-            {['Home', 'About', 'Service', 'Merchant', 'Developer', 'Contact us'].map((item, i) => (
+            {['Home', 'About', 'Service', 'Merchant', 'Developer', 'Contact'].map((item, i) => (
               <li key={i} className="md:border-none border-b-[2px] border-[#008001]" data-aos="fade-down" data-aos-delay={400 + i * 100}>
                 <Link smooth to={`/#${item.toLowerCase().replace(/\s+/g, '')}`} onClick={closeMenu}>
                   <div className="font-normal block py-2 px-3 text-black font-semibold hover:bg-gray-700 md:hover:bg-transparent md:p-0 hover:border-b-2 hover:border-[#008001] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300 font-outfit">
