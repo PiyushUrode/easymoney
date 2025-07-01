@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Helmet } from 'react-helmet';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -39,11 +38,7 @@ const sendEmail = (e) => {
 
   return (
     <>
-      <Helmet>
-        <title>Contact EverSafePay – Let’s Enable Your Business to Grow</title>
-        <meta name="description" content="Need help with integrations or payouts? Reach EverSafePay support or sales via email, WhatsApp, or our contact form." />
-        <meta name="keywords" content="contact EverSafePay, payment support India, merchant onboarding help, payout support, payment integration contact" />
-      </Helmet>
+
 
       <div className=" bg-[#00800010] px-4 py-8 md:px-16 lg:px-32 flex flex-col md:gap-12" id="contact">
         {/* Title Section */}

@@ -27,14 +27,7 @@ const S1Hero = () => {
           <p className=" text-sm md:text-lg text-gray-300 mb-6  w-full ">
             Your trusted partner for seamless pay-in and payout solutions — fast onboarding, real-time settlements, zero data storage risk.
           </p>
-          <div className="flex gap-4">
-            <button className="bg-[#008001] text-white px-6 py-3 text-sm  rounded-lg shadow-md hover:bg-[#008001] transition duration-300">
-              Get Started
-            </button>
-            <button className="bg-white text-[#042D61] px-6 py-3  text-sm rounded-lg shadow-md border-2 border-[#008001] hover:bg-green-100 transition duration-300">
-            Book Demo
-            </button>
-          </div>
+
         </div>
 
         {/* Right Image */}

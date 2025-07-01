@@ -51,33 +51,8 @@ const Navbar = () => {
 
         {/* Right Section */}
         <div className="flex md:order-2 sm:gap-5 space-x-1 md:space-x-0 rtl:space-x-reverse justify-center items-center">
-          <div className="flex gap-3 sm:gap-1 items-center" data-aos="fade-down" data-aos-delay="700">
-            <Link smooth to="/" onClick={closeMenu}>
-              <div className="flex sm:flex-row rounded-xl flex-col gap-5 md:gap-10 justify-center md:justify-start">
-                <button className="relative sm:px-16 rounded-lg sm:py-5 px-12 py-1 font-bold shadow-md shadow-[#ffffff8e] text-white h-9 sm:h-full" onClick={() => navigate("/")}>
-                  <span className="absolute inset-0 p-px flex items-center justify-center">
-                    <span className="font-bold shadow-md shadow-[#ffffff8e] px-2 py-2 sm:py-2 sm:px-8 sm:text-sm text-white bg-green-700 w-full h-9 sm:h-full text-sm hover:animate-popup hover:shadow-sm hover:shadow-[#ffffff] focus:ring focus:ring-offset-2 focus:ring-[#ffffff8e] rounded-md">
-                      Login
-                    </span>
-                  </span>
-                </button>
-              </div>
-            </Link>
-          </div>
+       
 
-          <div className="flex gap-3 sm:gap-1 items-center" data-aos="fade-down" data-aos-delay="800">
-            <Link smooth to="/" onClick={closeMenu}>
-              <div className="flex sm:flex-row rounded-xl flex-col gap-5 md:gap-10 justify-center md:justify-start">
-                <button className="relative sm:px-16 rounded-lg sm:py-5 px-12 py-1 font-bold shadow-md shadow-[#ffffff8e] text-white h-9 sm:h-full" onClick={() => navigate("/")}>
-                  <span className="absolute inset-0 p-px flex items-center justify-center">
-                    <span className="font-bold shadow-md shadow-[#ffffff8e] px-2 py-2 sm:py-2 sm:px-8 sm:text-sm text-white bg-green-700 w-full h-9 sm:h-full text-sm hover:animate-popup hover:shadow-sm hover:shadow-[#ffffff] focus:ring focus:ring-offset-2 focus:ring-[#ffffff8e] rounded-md">
-                      Sign Up
-                    </span>
-                  </span>
-                </button>
-              </div>
-            </Link>
-          </div>
 
           <button onClick={toggleNav} type="button" className="inline-flex items-center p-1 w-9 h-9 justify-center text-sm text-red-100 bg-gray-900 border border-[#00C6FF] rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-yellow-400 hover:bg-gray-900" aria-controls="navbar-sticky1" aria-expanded={isNavVisible} data-aos="fade-down" data-aos-delay="900">
             <span className="sr-only">Open main menu</span>

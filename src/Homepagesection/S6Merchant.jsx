@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Helmet } from 'react-helmet';
 
 
 import f1 from "../assets/features/f1.png";
@@ -51,11 +50,7 @@ const S6Merchant = () => {
 
 
 <>
-<Helmet>
-  <title>Merchant Payment Solutions – Onboarding, Compliance, Settlement Tools</title>
-  <meta name="description" content="Solutions for online businesses, platforms, and aggregators. Offer branded dashboards, digital onboarding, payouts, and compliance tools." />
-  <meta name="keywords" content="merchant onboarding, sub-merchant platforms, branded dashboard, payouts, settlement tools, compliance" />
-</Helmet>
+
 
     <section className="bg-blue-900 text-white py-10 md:py-20 px-10 lg:px-20 " id="merchant"> 
       {/* Section: For Whom */}
