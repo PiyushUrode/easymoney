@@ -30,11 +30,7 @@ const S7DeveloperApi = () => {
 
 <>  
 
-    <Helmet>
-  <title>EverSafePay Developer API Kit – Integrate Pay-in, Payouts, Onboarding</title>
-  <meta name="description" content="Explore RESTful APIs for merchant onboarding, transactions, refunds, and payouts. Full documentation, webhooks, and sandbox access." />
-  <meta name="keywords" content="developer API kit, EverSafePay API, payment integration, REST API, webhook, sandbox, API key" />
-</Helmet>
+
 
     <section className="bg-white text-center px-4 py-12 " id="developer">
       <h2
