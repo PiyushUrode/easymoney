@@ -49,9 +49,9 @@ const Footer = () => {
         {/* Logo Section */}
     
       <Link to="/" className="flex justify-center md:justify-start items-center">
-        <img src={logo} className="h-16" alt="" />
+        <img src={logo} className="h-10" alt="" />
       </Link>
-    <p className="text-gray-400 text-md pl-3 font-medium">
+    <p className="text-gray-400 text-base pl-3 font-medium">
 EverSafePay is a full-stack payment facilitator platform designed for modern businesses to manage pay-ins and payouts with ease.
     </p>
 
@@ -67,9 +67,9 @@ EverSafePay is a full-stack payment facilitator platform designed for modern bus
         Important Links
       </h2>
       <ul className="text-gray-400 font-medium flex flex-col gap-3 text-sm  lg:text-lg">
-        <li className="text-center md:text-left"><a href="#about">About Us</a></li>
-        <li className="text-center md:text-left"><a href="#service">Service  </a></li>
-        <li className="text-center md:text-left"><a href="#merchant">Merchant </a></li>
+        <li className="text-center md:text-left  hover:text-white hover:border-white"><a href="#about">About Us</a></li>
+        <li className="text-center md:text-left hover:text-white hover:border-white"><a href="#service">Service  </a></li>
+        <li className="text-center md:text-left hover:text-white hover:border-white"><a href="#merchant">Merchant </a></li>
       </ul>
     </div>
 
@@ -79,8 +79,8 @@ EverSafePay is a full-stack payment facilitator platform designed for modern bus
         About Us
       </h2>
       <ul className="text-gray-400 font-medium flex flex-col gap-3 text-sm  lg:text-lg">
-        <li className="text-center md:text-left"> <a  href="#dev">Developer </a></li>
-        <li className="text-center md:text-left"><a href="#contact"> Contact Us </a></li>
+        <li className="text-center md:text-left hover:text-white hover:border-white  "> <a  href="#dev">Developer </a></li>
+        <li className="text-center md:text-left hover:text-white hover:border-white"><a href="#contact"> Contact Us </a></li>
       </ul>
     </div>
 
