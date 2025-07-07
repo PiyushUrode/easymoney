@@ -2,15 +2,12 @@ import React, { Suspense } from 'react';
 import "../index.css"
 
 // Lazily import components
-const S1Hero = React.lazy(() => import("../Homepagesection/S1Hero.jsx"));
-const S2Keyfeature = React.lazy(() => import("../Homepagesection/S2Keyfeature.jsx"));
-const S3Usecase = React.lazy(() => import("../Homepagesection/S3Usecase.jsx"));
-const S4About = React.lazy(() => import("../Homepagesection/S4About.jsx"));
-const S5Service = React.lazy(() => import("../Homepagesection/S5Service.jsx"));
-const S6Merchant = React.lazy(() => import("../Homepagesection/S6Merchant.jsx"));
-const S7DeveloperApi = React.lazy(() => import("../Homepagesection/S7DeveloperApi.jsx"));
-const S8ContactForm = React.lazy(() => import("../Homepagesection/S8ContactForm.jsx"));
-
+// const S1Hero = React.lazy(() => import("../Homepagesection/S1Hero.jsx"));
+// const S2About = React.lazy(() => import("../Homepagesection/S2About.jsx"));
+const S3Usecase = React.lazy(() => import ("../Homepagesection/S3Usecase.jsx"));
+// const S4Partners = React.lazy(() => import ("../Homepagesection/S4Partners.jsx"));
+// const S5ContractAddress = React.lazy(() => import ("../Homepagesection/S5ContractAddress.jsx"));
+// const S6Faq = React.lazy(() => import ("../Homepagesection/S6Faq.jsx"));
 
 const Homepage = () => {
   return (
@@ -24,14 +21,12 @@ const Homepage = () => {
   <div>L</div>
 </div>}>
 
-<S1Hero/>
-<S2Keyfeature />
-<S3Usecase />
-<S4About />
-<S5Service />
-<S6Merchant />
-<S7DeveloperApi   />
-<S8ContactForm    />
+{/* <S1Hero/>
+<S2About /> */}
+ <S3Usecase />
+{/* <S4Partners/>
+<S5ContractAddress/>
+<S6Faq/> */}
     </Suspense>
   );
 };

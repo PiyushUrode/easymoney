@@ -1,5 +1,5 @@
 {
-  "name": "eversafepay",
+  "name": "AmeriCoin",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -14,8 +14,9 @@
     "aos": "^2.3.4",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^11.14.4",
-    "gsap": "^3.12.7",
+    "gsap": "^3.13.0",
     "locomotive-scroll": "^4.1.4",
+    "lucide-react": "^0.525.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -28,7 +29,7 @@
     "react-tilt": "^1.0.2",
     "react-toastify": "^11.0.5",
     "reactjs-flip-card": "^2.0.3",
-    "swiper": "^11.2.2",
+    "swiper": "^11.2.10",
     "tailwind-scrollbar": "^3.1.0",
     "vite-bundle-visualizer": "^1.2.1"
   },

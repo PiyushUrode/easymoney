@@ -1,46 +1,63 @@
-import React from 'react';
+import React from "react";
 import heroimg from "../assets/hero/hero1.png";
-import { Helmet } from 'react-helmet';
+import herovideo from "../assets/video/herovideo.mp4";
+import icon from "../assets/hero/AMERICOINTEXT.png"; 
 
 const S1Hero = () => {
   return (
-    <>  
-   <Helmet>
-  <title>EverSafePay – Complete Pay-in & Payout Payment Facilitator for Businesses</title>
-  <meta name="description" content="Simplifying digital payments with fast onboarding, real-time settlements, and zero data storage risk. Trusted by businesses across India." />
-  <meta name="keywords" content="EverSafePay, pay-in, payout, payment facilitator, payment aggregator, merchant onboarding, UPI, cards, digital payments India" />
-</Helmet>
+    <>
+
+    <section className="relative w-full   gap-20 py-10 lg:py-20 px-5 md:px-10 lg:px-20 overflow-hidden">
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover  md:object-contain z-0"
+      >
+        <source src={herovideo} type="video/mp4" />
+      </video>
 
 
 
-    <headers className="bg-[#042D61] py-0  flex flex-col-reverse  md:flex-row py-10  md:pt-24 px-3 md:px-10 justify-end" id="home">
-        
-        {/* Left Content */}
-        <div className="w-full md:w-[40%]  flex flex-col justify-center ">
-     
-  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-white font-extrabold md:leading-tight md:tracking-normal mb-4 md:space-y-5 font-Prompt  ">
-            <span className="  font-prompt block">Simplifying</span>
-            <span className="  font-prompt block text-[#48DD49]">Payments for</span>
-            <span className="  font-prompt block">Every Business</span>
-          </h1>
+      {/* Hero Content */}
+      <div className="relative z-20 flex gap-3 flex-col justify-center items-center  text-center">
+        {/* Title */}
+ <img src={icon} alt="" className="   md:max-w-xs" />
 
-          <p className=" text-sm md:text-lg text-gray-300 mb-6  w-full ">
-            Your trusted partner for seamless pay-in and payout solutions — fast onboarding, real-time settlements, zero data storage risk.
-          </p>
+        {/* Subtext */}
+        <p className="text-sm md:text-lg lg:text-2xl tracking-wider  text-[#D6D6D6]  font-gilroyR">
+          Real Estate Meets Blockchain
+        </p>
 
+        {/* Skyline */}
+        <img
+          src={heroimg}
+          alt="Golden City Skyline"
+          className="w-full max-w-m lg:max-w-4xl  object-cover md:object-contain mb-10 px-4"
+        />
+
+        {/* CTA Buttons */}
+        <div className="flex flex-wrap justify-center gap-4 ">
+          <button className="bg-[#E7B764] text-black px-6 py-1  text-lg hover:brightness-110 transition-all font-gilroyR border border-[#E7B764]">
+            Buy Token
+          </button>
+          <button className="border border-[#E7B764] text-white text-lg px-6 py-1  hover:bg-white hover:text-black transition-all font-gilroyR">
+            Whitepaper
+          </button>
         </div>
+      </div>
 
-        {/* Right Image */}
-        <div className="w-full md:w-[60%] flex justify-end">
-          <img
-            src={heroimg}
-            alt="Payment Solutions Illustration"
-            className="w-full h-auto p-0 object-contain drop-shadow-lg"
-          />
-        </div>
-      
-    </headers>
-    </>
+
+            <div className="w-full h-16 bg-black absolute bottom-0 left-0  backdrop-blur-2xl  "></div>
+      {/* Bottom Blur Strip */}
+
+    </section>
+
+
+
+
+          </>
   );
 };
 

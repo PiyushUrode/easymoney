@@ -1,4 +1,3 @@
-
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -8,20 +7,20 @@ export default {
   theme: {
     extend: {
 
-
-
-
-      keyframes: {
-        popup: {
-          '0%, 100%': { transform: 'scale(1)', opacity: '1' },
-          '50%': { transform: 'scale(1.1)', opacity: '0.9' },
-        },
+ fontFamily: {
+        gilroy: ['Gilroy', 'sans-serif'],
+        gilroyB: ['gilroyB', 'sans-serif'],
+        gilroyH: ['gilroyH', 'sans-serif'],
+        gilroyR: ['gilroyR', 'sans-serif'],
+        gilroyM: ['gilroyM', 'sans-serif'],
+        gilroyL: ['gilroyL', 'sans-serif'],
+        cinzel: ['Cinzel', 'serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
+        nunito: ['Nunito', 'sans-serif'],
+        poppins: ['poppins', 'sans-serif'],
+        poppinsb: ['poppinsb', 'sans-serif'],
       },
-      animation: {
-        popup: 'popup 1s ease-in-out infinite',
-        'popup-twice': 'popup 2s ease-in 2',
-        'popup-once': 'popup 2s ease-in 1',
-      },
+
 
 
       screens: {
@@ -48,8 +47,10 @@ export default {
       },
       backgroundImage: {
 
+ 
 
-      'text-custom-gradient': ' linear-gradient(95deg, #00FFED 0%, #A50093 75%  ,rgba(165, 0, 146, 0.5) 100%);',
+
+      // 'text-custom-gradient': 'linear-gradient(90deg,rgba(231, 183, 100, 1) 0%, rgba(0, 0, 0, 1) 13%, rgba(0, 0, 0, 1) 88%, rgba(231, 183, 100, 1) 100%);',
         'button-custom-gradient': ' linear-gradient(90deg, #6D4CFF 0%, #00C6FF 100%);',
         'custom-gradient': 'linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,161,0,1) 100%); ',
         'usecase-gradient': 'linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,161,0,0.13778011204481788) 100%)',
@@ -86,7 +87,7 @@ export default {
       },
       
       boxShadow: {
-        'custom-drop': '0px 0px 15px #00FFED', 
+        'custom-drop': '0px 4px 4px #000000', 
         'custom-drop2': 'inset 0px -1px 20px 3px #00FFED;', 
         'custom-inner': 'inset 0px 4px 5px 5px 0.5  #00FFED', // Inner shadow
         'custom-purple': '0px 0px 25px 23px rgba(255, 161, 0, 1)',
@@ -102,5 +103,5 @@ export default {
     }
     
   },
-  plugins: [ require('tailwind-scrollbar')  ],
+  plugins: [  ],
 }

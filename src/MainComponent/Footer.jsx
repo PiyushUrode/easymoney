@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../index.css";
-import logo from "../assets/logo/logo2.png";
+import logo from "../assets/logo/logo_hr_lght.png";
 
 import footericon1 from "../assets/footer/f1.png";
 

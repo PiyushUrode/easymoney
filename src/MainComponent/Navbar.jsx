@@ -1,32 +1,29 @@
 import { HashLink as Link } from "react-router-hash-link";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import AOS from "aos";
-import "aos/dist/aos.css";
-
-import logo from "../assets/logo/logo1.png";
-import lock from "../assets/logo/icon1.png";
+import "../index.css"
+import logo from "../assets/logo/logo_hr_lght.png"
+// import Popup from './Popupbuydog';
 
 const Navbar = () => {
   const navigate = useNavigate();
+  // const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isNavVisible, setIsNavVisible] = useState(false);
 
+  // Toggle popup visibility
+  // const togglePopup = () => {
+  //   setIsPopupOpen(!isPopupOpen);
+  // };
+
+  // Scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
     };
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      once: true,
-      easing: "ease-in-out",
-      offset: 0,
-    });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const toggleNav = () => {
@@ -35,52 +32,156 @@ const Navbar = () => {
 
   const closeMenu = () => {
     setIsNavVisible(false);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
-
   return (
-       <nav className={`w-full overflow-x-hidden z-0 bg-white top-0 border-b border-none dark:border-gray-600`}>
-      <div className="relative max-w-full flex flex-wrap items-center justify-between mx-auto p-4 px-4 md:p-4 md:px-8">
+    <nav
+      className={`w-full     overflow-x-hidden z-0    top-0 border-b border-none dark:border-gray-600 `}
+    >
+      <div className="relative max-w-full flex flex-wrap items-center justify-between mx-auto p-0 px-4 md:p-4 md:px-8">
         {/* Logo */}
         <Link smooth to="/" onClick={closeMenu}>
-          <div className="flex items-center space-x-3 rtl:space-x-reverse" data-aos="fade-down" data-aos-delay="0">
-            <img loading="lazy" src={logo} className="w-[7rem] sm:w-[9rem] h-auto" alt="eversafepay" />
+          <div className="flex items-center space-x-3 rtl:space-x-reverse">
+            <img
+              loading="lazy"
+              src={logo}
+              className="w-[7rem]  sm:w-[9rem] h-auto"
+              alt="UVT movies"
+            />
           </div>
         </Link>
 
         {/* Right Section */}
-        <div className="flex md:order-2 sm:gap-5 space-x-1 md:space-x-0 rtl:space-x-reverse justify-center items-center">
-       
+        <div className="flex md:order-2 sm:gap-5 space-x-4 md:space-x-0 rtl:space-x-reverse">
+          <div className="flex gap-3 sm:gap-1  items-center bg-gradient-border shadow-md  shadow-md  p-[1px]">
+            <Link smooth to="/" onClick={closeMenu} className="bg-black">
 
+                <button
+                  className="relative  rounded-lg   px-4 py-1   text-white   sm:h-full"
+                  onClick={() => navigate("/")}
+                >
 
-          <button onClick={toggleNav} type="button" className="inline-flex items-center p-1 w-9 h-9 justify-center text-sm text-red-100 bg-gray-900 border border-[#00C6FF] rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-yellow-400 hover:bg-gray-900" aria-controls="navbar-sticky1" aria-expanded={isNavVisible} data-aos="fade-down" data-aos-delay="900">
+                      BUY NOW
+                </button>
+
+            </Link>
+          </div>
+
+          <button
+            onClick={toggleNav}
+            type="button"
+            className="inline-flex items-center p-1 w-9 h-9  justify-center text-sm text-red-100 bg-gray-900 border border-[#00C6FF] rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-yellow-400 hover:bg-gray-900"
+            aria-controls="navbar-sticky1"
+            aria-expanded={isNavVisible}
+          >
             <span className="sr-only">Open main menu</span>
-            <svg className="w-4 h-5" aria-hidden="true" fill="none" viewBox="0 0 17 14">
-              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
+            <svg
+              className="w-4 h-5"
+              aria-hidden="true"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
             </svg>
           </button>
-
-          <div className="flex items-center md:hidden" data-aos="fade-down" data-aos-delay="1000">
-            <img loading="lazy" src={lock} className="w-[3rem] h-auto" alt="eversafepaylock" />
-          </div>
         </div>
 
         {/* Navbar Items */}
-        <div id="navbar-sticky1" className={`items-center justify-center w-[100%] md:flex md:w-fit md:order-1 ${isNavVisible ? "block" : "hidden"}`} data-aos="fade-down" data-aos-delay="300">
-          <ul className="navcar flex flex-col p-4 md:py-1.5 mt-5 bg-[#042D61] sm:bg-white font-medium border border-[#00C6FF] md:rounded-[50px] rounded-lg md:space-x-[3vmax] md:flex-row md:mt-0 md:border-0 font-semibold tablet:bg-gray-900">
-            {['Home', 'About', 'Service', 'Merchant', 'Developer', 'Contact'].map((item, i) => (
-              <li key={i} className="md:border-none border-b-[2px] border-[#008001]" data-aos="fade-down" data-aos-delay={400 + i * 100}>
-                <Link smooth to={`/#${item.toLowerCase().replace(/\s+/g, '')}`} onClick={closeMenu}>
-                  <div className="font-normal block py-2 px-3 text-black font-semibold hover:bg-gray-700 md:hover:bg-transparent md:p-0 hover:border-b-2 hover:border-[#008001] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300 font-outfit">
-                    {item}
-                  </div>
-                </Link>
-              </li>
-            ))}
+        <div
+          id="navbar-sticky1"
+          className={`items-center justify-center w-[99%] md:flex  md:w-fit md:order-1  ${
+            isNavVisible ? "block" : "hidden"
+          }`}
+        >
+          <ul className="navcar flex flex-row flex-wrap item-wrap overflow-x-hidden  p-4 md:py-1.5 mt-4 font-medium  font-Ethnocentric  md:rounded-[50px] rounded-lg md:space-x-[3vmax] md:flex-row md:mt-0 md:border-0 text-[#ffffffa6] hover:text-white font-semibold  bg-[#000000]  md:bg-black">
+            <li className="relative border-b-0 md:border-none group">
+              <Link smooth to="/#home" onClick={closeMenu}>
+                <div className="font-normal block py-2 px-3 text-[#FFFFFFA6] hover:text-[#ffffff] hover:text-white font-semibold hover:bg-gray-700 md:hover:bg-transparent md:p-0 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300 font-outfit">
+                  Home
+                </div>
+
+                <span className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-black via-yellow-500 to-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+              </Link>
+            </li>
+
+            <li className="relative border-b-0 md:border-none group">
+              <Link smooth to="/#about" onClick={closeMenu}>
+                <div className="font-normal block py-2 px-3 text-[#FFFFFFA6] hover:text-white font-semibold hover:bg-gray-700 md:hover:bg-transparent md:p-0 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300 font-outfit">
+                  About
+                </div>
+
+                <span className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-black via-yellow-500 to-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+              </Link>
+            </li>
+
+            <li className="relative border-b-0 md:border-none group">
+              <Link smooth to="/#usecase" onClick={closeMenu}>
+                <div className="font-normal block py-2 px-3 text-[#FFFFFFA6] hover:text-white font-semibold hover:bg-gray-700 md:hover:bg-transparent md:p-0 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300 font-outfit">
+                  UseCase
+                </div>
+
+                <span className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-black via-yellow-500 to-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+              </Link>
+            </li>
+
+            <li className="relative border-b-0 md:border-none group">
+              <Link smooth to="/#token" onClick={closeMenu}>
+                <div className="font-normal block py-2 px-3 text-[#FFFFFFA6] hover:text-white font-semibold hover:bg-gray-700 md:hover:bg-transparent md:p-0 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300 font-outfit">
+                  Tokenomics
+                </div>
+
+                <span className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-black via-yellow-500 to-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+              </Link>
+            </li>
+
+            <li className="relative border-b-0 md:border-none group">
+              <Link smooth to="/#roadmap" onClick={closeMenu}>
+                <div className="font-normal block py-2 px-3 text-[#FFFFFFA6] hover:text-white font-semibold hover:bg-gray-700 md:hover:bg-transparent md:p-0 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300 font-outfit">
+                Contract
+                </div>
+
+                <span className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-black via-yellow-500 to-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+              </Link>
+            </li>
+
+
+
+            <li className="relative border-b-0 md:border-none group md:hidden">
+              <Link smooth to="/#arvr" onClick={closeMenu}>
+                <div className="font-normal block  text-[#FFFFFFA6] hover:text-white font-semibold hover:bg-gray-700 md:hover:bg-transparent md:p-0 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300 font-outfit">
+                  <a
+                    target="blank"
+                    href="/"
+                    rel="noopener noreferrer"
+                    onClick={closeMenu}
+                  >
+                    <div
+                      className="font-normal block py-2 px-3 text-[#FFFFFFA6] hover:text-white font-semibold  hover:bg-gray-700 md:hover:bg-transparent md:p-0    transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100  duration-300 
+ font-outfit"
+                    >
+                      Whitepaper
+                    </div>
+                  </a>
+                </div>
+
+                <span className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-black via-yellow-500 to-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
+
+
     </nav>
   );
 };

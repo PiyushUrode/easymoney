@@ -1,70 +1,45 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+// src/components/S3Usecase.jsx
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 
+const S3Usecase = () => {
+  const boxRef = useRef(null);
+  const textRef = useRef(null);
 
-const useCasesRow1 = ["Retailers", "Aggregators", "SaaS", "D2C Brands"];
-const useCasesRow2 = ["NBFCs", "Gaming", "Travel", "Utility Platforms"];
-
-const Divider = () => (
-  <span className="text-green-500 px-3 hidden sm:inline-block">|</span>
-);
-
-const UseCases = () => {
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      easing: "ease-in-out",
-      once: true,
-      offset: 80,
+    // Animate the box from top with fade-in
+    gsap.from(boxRef.current, {
+      y: -100,
+      opacity: 0,
+      duration: 1,
+      ease: "power2.out",
+    });
+
+    // Animate the heading from right with fade-in
+    gsap.from(textRef.current, {
+      x: 100,
+      opacity: 0,
+      duration: 1,
+      delay: 0.5,
+      ease: "power3.out",
     });
   }, []);
 
   return (
-    <section className="bg-[#042D61] py-14 px-4">
-      {/* Heading */}
-      <h2
-        className="text-center text-xl sm:text-2xl md:text-3xl font-bold text-white mb-8"
-        data-aos="fade-down"
+    <div className="flex flex-col justify-center items-center min-h-screen bg-black text-white space-y-10">
+      <div
+        ref={boxRef}
+        className="w-40 h-40 bg-green-500 rounded-lg shadow-lg"
+      ></div>
+
+      <h1
+        ref={textRef}
+        className="text-4xl font-bold"
       >
-        USE CASES
-      </h2>
-
-      {/* Use Cases Container */}
-      <div className="max-w-5xl mx-auto space-y-6 text-center text-white">
-        {/* Row 1 */}
-        <div
-          className="flex flex-wrap justify-around items-center text-base sm:text-2xl font-medium"
-          data-aos="fade-up"
-        >
-          {useCasesRow1.map((item, index) => (
-            <React.Fragment key={index}>
-              <span data-aos="zoom-in" data-aos-delay={index * 100}>
-                {item}
-              </span>
-              {index !== useCasesRow1.length - 1 && <Divider />}
-            </React.Fragment>
-          ))}
-        </div>
-
-        {/* Row 2 */}
-        <div
-          className="flex flex-wrap justify-around items-center text-base sm:text-2xl font-medium"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          {useCasesRow2.map((item, index) => (
-            <React.Fragment key={index}>
-              <span data-aos="zoom-in" data-aos-delay={index * 100}>
-                {item}
-              </span>
-              {index !== useCasesRow2.length - 1 && <Divider />}
-            </React.Fragment>
-          ))}
-        </div>
-      </div>
-    </section>
+        GSAP Basic Animation
+      </h1>
+    </div>
   );
 };
 
-export default UseCases;
+export default S3Usecase;
