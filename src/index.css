@@ -143,6 +143,19 @@ footer {
   background-repeat: no-repeat;
 }
 
+.cardsbg {
+  background-image: url('./assets/tokenomics/cardsize.png'); /* adjust path based on project */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 20px;
+  min-height: 48px;
+}
+
+
 
 
 

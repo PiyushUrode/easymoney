@@ -50,7 +50,7 @@ const Navbar = () => {
               loading="lazy"
               src={logo}
               className="w-[7rem]  sm:w-[9rem] h-auto"
-              alt="UVT movies"
+              alt="ameri-coin"
             />
           </div>
         </Link>
@@ -135,7 +135,7 @@ const Navbar = () => {
             </li>
 
             <li className="relative border-b-0 md:border-none group">
-              <Link smooth to="/#token" onClick={closeMenu}>
+              <Link smooth to="/tokenomics" onClick={closeMenu}>
                 <div className="font-normal block py-2 px-3 text-[#FFFFFFA6] hover:text-white font-semibold hover:bg-gray-700 md:hover:bg-transparent md:p-0 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300 font-outfit">
                   Tokenomics
                 </div>
@@ -145,9 +145,9 @@ const Navbar = () => {
             </li>
 
             <li className="relative border-b-0 md:border-none group">
-              <Link smooth to="/#roadmap" onClick={closeMenu}>
+              <Link smooth to="/roadmap" onClick={closeMenu}>
                 <div className="font-normal block py-2 px-3 text-[#FFFFFFA6] hover:text-white font-semibold hover:bg-gray-700 md:hover:bg-transparent md:p-0 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300 font-outfit">
-                Contract
+               Roadmap
                 </div>
 
                 <span className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-black via-yellow-500 to-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
@@ -156,27 +156,7 @@ const Navbar = () => {
 
 
 
-            <li className="relative border-b-0 md:border-none group md:hidden">
-              <Link smooth to="/#arvr" onClick={closeMenu}>
-                <div className="font-normal block  text-[#FFFFFFA6] hover:text-white font-semibold hover:bg-gray-700 md:hover:bg-transparent md:p-0 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300 font-outfit">
-                  <a
-                    target="blank"
-                    href="/"
-                    rel="noopener noreferrer"
-                    onClick={closeMenu}
-                  >
-                    <div
-                      className="font-normal block py-2 px-3 text-[#FFFFFFA6] hover:text-white font-semibold  hover:bg-gray-700 md:hover:bg-transparent md:p-0    transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-100  duration-300 
- font-outfit"
-                    >
-                      Whitepaper
-                    </div>
-                  </a>
-                </div>
 
-                <span className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-black via-yellow-500 to-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-              </Link>
-            </li>
           </ul>
         </div>
       </div>

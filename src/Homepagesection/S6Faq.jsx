@@ -104,34 +104,7 @@ const S6Faq = () => {
         </div>
       </div>
 
-      {/* ============ VIDEO SECTION ============ */}
-      <div className="w-full bg-black flex flex-col items-center ">
-        <div className="w-full max-w-4xl max-h-fit">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="  rounded-lg"
-          >
-            <source src={Americoinvideo} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
 
-        <div className="w-full ">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="w-full rounded-lg"
-          >
-            <source src={Buildingvideo} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      </div>
     </div>
   )
 }
