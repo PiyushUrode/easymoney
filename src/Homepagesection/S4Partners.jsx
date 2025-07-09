@@ -18,7 +18,7 @@ const S4Partners = () => {
   return (
     <div className="py-10 flex flex-col items-center text-center bg-black">
       {/* Responsive heading */}
-      <h1 className="text-center text-[7vw] sm:text-4xl md:text-5xl font-montserrat font-normal bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-orange-500 mb-12 tracking-wide">
+      <h1 className="text-center text-xl sm:text-2xl md:text-4xl font-montserrat font-bold text-gradient-gold mb-12 tracking-wide">
         STRATEGIC PARTNERS
       </h1>
 
@@ -36,14 +36,14 @@ const S4Partners = () => {
           768: { slidesPerView: 4 },     // tablets
           1024: { slidesPerView: 5 },    // desktops
         }}
-        className="w-full max-w-6xl"
+        className="w-full "
       >
         {logos.concat(logos).map((logo, index) => (
           <SwiperSlide key={index} className="flex justify-center items-center">
             <img
               src={logo}
               alt={`partner-${index}`}
-              className="object-contain w-32"  />
+              className="object-contain w-48"  />
           </SwiperSlide>
         ))}
       </Swiper>

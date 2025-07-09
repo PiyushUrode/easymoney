@@ -143,6 +143,13 @@ footer {
   background-repeat: no-repeat;
 }
 
+.contract-bg {
+  background-image: url('./assets/contract/bg-contract.png'); /* Webpack/Vite resolves this path automatically */
+  background-size: cover;
+
+  background-repeat: no-repeat;
+}
+
 .cardsbg {
   background-image: url('./assets/tokenomics/cardsize.png'); /* adjust path based on project */
   background-size: cover;

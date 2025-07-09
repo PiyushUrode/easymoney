@@ -40,18 +40,18 @@ const S6Faq = () => {
   }
 
   return (
-    <div className=" text-white w-full overflow-hidden">
+    <div className=" text-white  faq-background   w-full overflow-hidden">
 
       {/* ================= FAQ SECTION ================= */}
       <div className="relative px-4 py-10 md:py-20 flex flex-col items-center z-10">
-        <h2 className="text-center text-[6vw] sm:text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-orange-500 mb-12">
+        <h2 className="text-center text-gradient-gold text-xl sm:text-2xl md:text-4xl font-bold mb-12">
           Frequently Asked Questions (FAQ)
         </h2>
 
         {/* Grid for layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full max-w-6xl px-4 md:px-6">
+        <div className="flex flex-col md:flex-row  w-full max-w-screen-2xl px-4 md:px-6">
           {/* FAQs List */}
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col w-full md:w-[55%] gap-5">
             {faqData.map((faq, index) => (
               <div
                 key={index}
@@ -62,7 +62,7 @@ const S6Faq = () => {
                   className="flex justify-between items-center cursor-pointer"
                 >
                   <span className="font-semibold text-base md:text-lg flex gap-2 font-montserrat">
-                    <span className="bg-yellow-500 text-black rounded px-2 font-bold">Q{index + 1}</span>
+                    <span className=" text-white rounded px-2 font-bold">Q{index + 1}</span>
                     {faq.question}
                   </span>
                   {activeIndex === index ? (
@@ -94,7 +94,7 @@ const S6Faq = () => {
           </div>
 
           {/* Right Image */}
-          <div className="flex justify-center items-center">
+          <div className="flex w-full md:w-[45%]  hidden md:block  justify-center items-center">
             <img
               src={QuestionMark}
               alt="question mark"

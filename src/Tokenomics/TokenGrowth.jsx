@@ -15,7 +15,7 @@ const tokenData = [
 const TokenGrowth = () => {
   return (
     <>  
-    <div className='flex flex-col items-center text-center px-4 py-14 bg-black text-gold'>
+    <div className='flex flex-col items-center text-center px-1 md:px-4 py-14 bg-black text-gold'>
       {/* Headline */}
       <div className='mb-8 max-w-2xl justify-items-center text-center'>
         <h1 className='text-xl  font-bold text-[#E7B764] mb-3 leading-tight'>

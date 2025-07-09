@@ -11,9 +11,9 @@ const S5ContractAddress = () => {
   }
 
   return (
-    <div className="w-full bg-black text-white py-16 px-4 flex flex-col items-center">
+    <div className="w-full contract-bg text-white py-16 px-4 flex flex-col items-center">
       {/* Title */}
-      <h2 className="text-[6vw] sm:text-4xl md:text-5xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-orange-500 mb-6">
+      <h2 className=" text-xl sm:text-2xl md:text-4xl font-bold text-center text-gradient-gold mb-6">
         CONTRACT ADDRESS
       </h2>
 
@@ -24,7 +24,7 @@ const S5ContractAddress = () => {
 
       {/* Address Box */}
       <div className="border border-yellow-400 rounded-3xl p-6 w-full max-w-3xl text-center">
-        <div className="bg-yellow-400 text-black font-medium rounded-xl px-4 py-3 mb-4 overflow-auto text-sm sm:text-base">
+        <div className="bg-yellow-400 text-black font-medium rounded-xl px-4 py-3 mb-4 overflow-hidden text-xs sm:text-base">
           {address}
         </div>
 

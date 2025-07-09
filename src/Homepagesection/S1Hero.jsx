@@ -7,13 +7,13 @@ const S1Hero = () => {
   return (
     <>
 
-    <section className="relative w-full   gap-20 py-10 lg:py-20 px-5 md:px-10 lg:px-20 overflow-hidden">
+    <section className="relative w-full   gap-20 py-10 lg:py-20 px-5 md:px-10 lg:px-20 overflow-hidden" id="home">
       <video
         autoPlay
         muted
         loop
         playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover  md:object-contain z-0"
+        className="absolute top-0 left-0 w-full h-full object-cover  md:object-contain "
       >
         <source src={herovideo} type="video/mp4" />
       </video>
@@ -21,14 +21,16 @@ const S1Hero = () => {
 
 
       {/* Hero Content */}
-      <div className="relative z-20 flex gap-3 flex-col justify-center items-center  text-center">
+      <div className="relative  flex  flex-col justify-center items-center  text-center">
         {/* Title */}
+        <div className="flex flex-col gap-4 justify-center items-center align-middle">  
  <img src={icon} alt="" className="   md:max-w-xs" />
 
         {/* Subtext */}
         <p className="text-sm md:text-lg lg:text-2xl tracking-wider  text-[#D6D6D6]  font-gilroyR">
           Real Estate Meets Blockchain
         </p>
+        </div>
 
         {/* Skyline */}
         <img
@@ -49,7 +51,7 @@ const S1Hero = () => {
       </div>
 
 
-            <div className="w-full h-16 bg-black absolute bottom-0 left-0  backdrop-blur-2xl  "></div>
+            <div className="w-full h-16 bg-black absolute bottom-0 left-0  hidden md:block backdrop-blur-2xl  "></div>
       {/* Bottom Blur Strip */}
 
     </section>

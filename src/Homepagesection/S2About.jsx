@@ -7,8 +7,8 @@ import "../index.css"; // where your .text-gradient-gold class is defined
 
 const AboutUs = () => {
   return (
-    <div className="bg-[#141414] text-white w-full px-4 md:px-10 py-16">
-      <h2 className="text-center text-4xl md:text-5xl font-semibold text-gradient-gold mb-14 tracking-wide">
+    <div className="bg-[#141414] text-white w-full px-4 md:px-10 py-10">
+      <h2  id="about" className="text-center text-xl sm:text-2xl md:text-5xl font-montserrat font-medium text-gradient-gold mb-14 tracking-wide">
         ABOUT US
       </h2>
 

@@ -40,9 +40,9 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`w-full     overflow-x-hidden z-0    top-0 border-b border-none dark:border-gray-600 `}
+      className={`w-full  pt-3 md:pt-0   overflow-x-hidden z-50 bg-black   top-0 border-b border-none dark:border-gray-600 `}
     >
-      <div className="relative max-w-full flex flex-wrap items-center justify-between mx-auto p-0 px-4 md:p-4 md:px-8">
+      <div className="relative max-w-full  flex flex-wrap items-center justify-between mx-auto p-0 px-4 md:p-4 md:px-8">
         {/* Logo */}
         <Link smooth to="/" onClick={closeMenu}>
           <div className="flex items-center space-x-3 rtl:space-x-reverse">
@@ -98,15 +98,16 @@ const Navbar = () => {
 
         {/* Navbar Items */}
         <div
-          id="navbar-sticky1"
-          className={`items-center justify-center w-[99%] md:flex  md:w-fit md:order-1  ${
-            isNavVisible ? "block" : "hidden"
-          }`}
-        >
-          <ul className="navcar flex flex-row flex-wrap item-wrap overflow-x-hidden  p-4 md:py-1.5 mt-4 font-medium  font-Ethnocentric  md:rounded-[50px] rounded-lg md:space-x-[3vmax] md:flex-row md:mt-0 md:border-0 text-[#ffffffa6] hover:text-white font-semibold  bg-[#000000]  md:bg-black">
-            <li className="relative border-b-0 md:border-none group">
+  id="navbar-sticky1"
+  className={`items-center justify-center w-[99%] md:flex flex-col md:flex-row md:w-fit md:order-1   ${
+    isNavVisible ? "block" : "hidden"
+  }`}
+>
+
+          <ul className="navcar flex  flex-row flex-col md:flex-row   overflow-x-hidden  p-4 md:py-1.5 mt-4 font-medium  font-montserrat  md:rounded-[50px] rounded-lg md:space-x-[3vmax] md:flex-row md:mt-0 md:border-0 text-[#ffffffa6] hover:text-white font-semibold ">
+            <li className="relative  group">
               <Link smooth to="/#home" onClick={closeMenu}>
-                <div className="font-normal block py-2 px-3 text-[#FFFFFFA6] hover:text-[#ffffff] hover:text-white font-semibold hover:bg-gray-700 md:hover:bg-transparent md:p-0 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300 font-outfit">
+                <div className="font-normal block py-2 px-3 text-[#FFFFFFA6] hover:text-[#ffffff] hover:text-white font-semibold hover:bg-gray-700  md:hover:bg-transparent md:p-0 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300 font-outfit">
                   Home
                 </div>
 
@@ -114,7 +115,7 @@ const Navbar = () => {
               </Link>
             </li>
 
-            <li className="relative border-b-0 md:border-none group">
+            <li className="relative  group">
               <Link smooth to="/#about" onClick={closeMenu}>
                 <div className="font-normal block py-2 px-3 text-[#FFFFFFA6] hover:text-white font-semibold hover:bg-gray-700 md:hover:bg-transparent md:p-0 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300 font-outfit">
                   About
@@ -124,7 +125,7 @@ const Navbar = () => {
               </Link>
             </li>
 
-            <li className="relative border-b-0 md:border-none group">
+            <li className="relative  group">
               <Link smooth to="/#usecase" onClick={closeMenu}>
                 <div className="font-normal block py-2 px-3 text-[#FFFFFFA6] hover:text-white font-semibold hover:bg-gray-700 md:hover:bg-transparent md:p-0 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300 font-outfit">
                   UseCase
@@ -134,7 +135,7 @@ const Navbar = () => {
               </Link>
             </li>
 
-            <li className="relative border-b-0 md:border-none group">
+            <li className="relative  group">
               <Link smooth to="/tokenomics" onClick={closeMenu}>
                 <div className="font-normal block py-2 px-3 text-[#FFFFFFA6] hover:text-white font-semibold hover:bg-gray-700 md:hover:bg-transparent md:p-0 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300 font-outfit">
                   Tokenomics
@@ -144,7 +145,7 @@ const Navbar = () => {
               </Link>
             </li>
 
-            <li className="relative border-b-0 md:border-none group">
+            <li className="relative  group">
               <Link smooth to="/roadmap" onClick={closeMenu}>
                 <div className="font-normal block py-2 px-3 text-[#FFFFFFA6] hover:text-white font-semibold hover:bg-gray-700 md:hover:bg-transparent md:p-0 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300 font-outfit">
                Roadmap
