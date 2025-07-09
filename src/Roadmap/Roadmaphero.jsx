@@ -7,7 +7,7 @@ const Roadmaphero = () => {
   return (
     <>
 
-    <section className="relative w-full   gap-20 py-10 lg:py-20  overflow-hidden">
+    <section className="relative w-full h-[100dvh]   gap-20 py-10 lg:py-20  overflow-hidden">
       <video
         autoPlay
         muted
@@ -21,7 +21,7 @@ const Roadmaphero = () => {
 
 
       {/* Hero Content */}
-      <div className="relative z-20 flex gap-3 flex-col justify-center items-center  text-center">
+      <div className="relative  flex gap-3 flex-col justify-center items-center  text-center">
         {/* Title */}
  <img src={icon} alt="" className="   md:max-w-xs   " />
 

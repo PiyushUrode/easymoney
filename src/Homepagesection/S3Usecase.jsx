@@ -70,7 +70,7 @@ const S3Usecase = () => {
 
   return (
     <div
-      className="relative w-full h-svh md:h-screen bg-black overflow-hidden"
+      className="relative w-full h-screen bg-black overflow-hidden"
       ref={containerRef}
     >
       <div className="relative w-full h-full flex flex-col justify-center items-center">
@@ -86,11 +86,10 @@ const S3Usecase = () => {
             <div
               key={i}
               ref={addToRefs}
-              // Tailwind CSS se card ko left ya right align kiya jaa raha hai
+
             className={`absolute top-0 left-0 w-full h-full flex items-center p-4 lg:p-20 
   ${
-    // For small devices (up to md breakpoint), always center
-    // For medium and larger devices, apply alternating justification
+
     window.innerWidth < 768 
       ? 'justify-center' // On small screens, always center horizontally
       : i % 2 === 0 ? 'justify-start' : 'justify-end'
@@ -100,7 +99,7 @@ const S3Usecase = () => {
               <img
                 src={img}
                 alt={`usecase-${i}`}
-                className="max-h-[70vh] w-auto max-w-[80%] md:max-w-[50%] xl:max-w-[40%] object-contain  rounded-lg drop-shadow-lg"
+                className="max-h-[100%] w-auto max-w-[100%] md:max-w-[50%] xl:max-w-[40%] object-contain  rounded-lg drop-shadow-lg"
               />
             </div>
           ))}

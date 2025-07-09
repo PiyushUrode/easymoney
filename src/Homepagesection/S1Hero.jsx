@@ -7,7 +7,7 @@ const S1Hero = () => {
   return (
     <>
 
-    <section className="relative w-full   gap-20 py-10 lg:py-20 px-5 md:px-10 lg:px-20 overflow-hidden" id="home">
+    <section className="relative w-full h-[100dvh] md:h-full justify-center flex  gap-20 py-10 lg:py-20 px-5 md:px-10 lg:px-20 overflow-hidden" id="home">
       <video
         autoPlay
         muted
@@ -51,7 +51,7 @@ const S1Hero = () => {
       </div>
 
 
-            <div className="w-full h-16 bg-black absolute bottom-0 left-0  hidden md:block backdrop-blur-2xl  "></div>
+            <div className="w-full h-10 bg-black absolute bottom-0 left-0  hidden md:block backdrop-blur-2xl  "></div>
       {/* Bottom Blur Strip */}
 
     </section>

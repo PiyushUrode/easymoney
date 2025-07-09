@@ -4,7 +4,7 @@ import icon from "../assets/tokenomics/TOKONOMICS.png";
 
 const TokenHero = () => {
   return (
-    <section className="relative w-full h-screen overflow-hidden">
+    <section className="relative w-full h-[100dvh]  overflow-hidden">
       {/* Background Video */}
       <video
         autoPlay
@@ -17,7 +17,7 @@ const TokenHero = () => {
       </video>
 
       {/* Overlay Content */}
-      <div className="relative z-10 w-full h-full flex items-start justify-center pt-10 px-4">
+      <div className="relative  w-full h-full flex items-start justify-center pt-10 px-4">
         <img
           src={icon}
           alt="Tokenomics"
@@ -26,7 +26,7 @@ const TokenHero = () => {
       </div>
 
       {/* Bottom Blur Strip */}
-      <div className="absolute bottom-0 left-0 w-full h-16 bg-black bg-opacity-50 backdrop-blur-xl z-20" />
+      <div className="absolute bottom-0 left-0 w-full h-16 bg-black bg-opacity-50 backdrop-blur-xl " />
     </section>
   );
 };
