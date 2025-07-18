@@ -1,4 +1,4 @@
-import React, { useRef, useLayoutEffect } from 'react';
+import  { useRef, useLayoutEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -20,11 +20,11 @@ const S3Usecase = () => {
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      // Har card ki shuruaati position set karein
+
       cardsRef.current.forEach((card) => {
-        // ✅ UPDATED: Sabhi cards ko shuru mein x-axis par center mein rakhein
+
         gsap.set(card, {
-          xPercent: 0, // Horizontal movement nahi
+          xPercent: 0, 
           yPercent: 100, // Sirf neeche se
           opacity: 0,
         });
@@ -69,10 +69,8 @@ const S3Usecase = () => {
   };
 
   return (
-    <div
-      className="relative w-full h-screen bg-black overflow-hidden"
-      ref={containerRef}
-    >
+
+    <>
       <div className="relative w-full h-full flex flex-col justify-center items-center">
         <h1
           id="usecase"
@@ -80,6 +78,19 @@ const S3Usecase = () => {
         >
           Use Cases
         </h1>
+        </div>
+   
+    <div
+      className="relative w-full h-screen lg::p-10 bg-black overflow-hidden"
+      ref={containerRef}
+    >
+
+
+
+
+      
+      <div className="relative w-full h-full flex flex-col py-7 justify-center items-center">
+    
 
         <div className="w-full h-full relative">
           {usecases.map((img, i) => (
@@ -87,7 +98,7 @@ const S3Usecase = () => {
               key={i}
               ref={addToRefs}
 
-            className={`absolute top-0 left-0 w-full h-full flex items-center p-4 lg:p-20 
+            className={`absolute top-10 left- w-full h-full   flex items-center p-4  
   ${
 
     window.innerWidth < 768 
@@ -99,13 +110,14 @@ const S3Usecase = () => {
               <img
                 src={img}
                 alt={`usecase-${i}`}
-                className="max-h-[100%] w-auto max-w-[100%] md:max-w-[50%] xl:max-w-[40%] object-contain  rounded-lg drop-shadow-lg"
+                className="max-h-[100%] w-auto max-w-[100%] md:max-w-[70%] xl:max-w-[80%] lg:px-14   object-contain  rounded-lg drop-shadow-lg"
               />
             </div>
           ))}
         </div>
       </div>
     </div>
+     </>
   );
 };
 

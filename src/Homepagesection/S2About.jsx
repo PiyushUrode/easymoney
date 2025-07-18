@@ -4,9 +4,13 @@ import ab1 from "../assets/About/About1.png";
 import ab2 from "../assets/About/about2.png";
 import ab3 from "../assets/About/about3.png";
 import "../index.css"; // where your .text-gradient-gold class is defined
+import S4Partners from "./S4Partners";
 
 const AboutUs = () => {
   return (
+    <>   
+          <div> <S4Partners /></div>
+   
     <div className="bg-[#141414] text-white w-full px-4 md:px-10 py-10">
       <h2  id="about" className="text-center text-xl sm:text-2xl md:text-5xl font-montserrat font-medium text-gradient-gold mb-14 tracking-wide">
         ABOUT US
@@ -76,6 +80,8 @@ const AboutUs = () => {
 
       </div>
     </div>
+ 
+  </>
   );
 };
 

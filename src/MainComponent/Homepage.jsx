@@ -5,10 +5,12 @@ import "../index.css"
 const S1Hero = React.lazy(() => import("../Homepagesection/S1Hero.jsx"));
 const S2About = React.lazy(() => import("../Homepagesection/S2About.jsx"));
 const S3Usecase = React.lazy(() => import ("../Homepagesection/S3Usecase.jsx"));
-const S4Partners = React.lazy(() => import ("../Homepagesection/S4Partners.jsx"));
+
 const S5ContractAddress = React.lazy(() => import ("../Homepagesection/S5ContractAddress.jsx"));
 const S6Faq = React.lazy(() => import ("../Homepagesection/S6Faq.jsx"));
 const S7AmeriVideo = React.lazy(() => import ("../Homepagesection/S7AmeriVideo.jsx"));
+const S8TrustedSignal = React.lazy(() => import ("../Homepagesection/S8TrustedSignal.jsx"));
+
 
 const Homepage = () => {
   return (
@@ -25,7 +27,7 @@ const Homepage = () => {
 <S1Hero/>
 <S2About />
  <S3Usecase />
-<S4Partners/>
+<S8TrustedSignal />
 <S5ContractAddress/>
 <S6Faq/>
 <S7AmeriVideo/>

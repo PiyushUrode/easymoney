@@ -70,6 +70,12 @@
   src: url('../src/assets/font/gilroy-bold/Gilroy-Light.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'latoB';
+  font-style: normal;
+  src: url('../src/assets/font/Lato/Lato-Bold.ttf') format('truetype');
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   color: #000000;

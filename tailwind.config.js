@@ -19,6 +19,7 @@ export default {
         nunito: ['Nunito', 'sans-serif'],
         poppins: ['poppins', 'sans-serif'],
         poppinsb: ['poppinsb', 'sans-serif'],
+        latoB: ['latoB', 'sans-serif'],
       },
 
 
@@ -48,12 +49,12 @@ export default {
       backgroundImage: {
 
  
-
+     'partners-gradient': 'linear-gradient(269.86deg, rgba(231, 183, 100, 0.1) 20.93%, rgba(0, 0, 0, 0.1) 100.8%);',
 
       // 'text-custom-gradient': 'linear-gradient(90deg,rgba(231, 183, 100, 1) 0%, rgba(0, 0, 0, 1) 13%, rgba(0, 0, 0, 1) 88%, rgba(231, 183, 100, 1) 100%);',
         'button-custom-gradient': ' linear-gradient(90deg, #6D4CFF 0%, #00C6FF 100%);',
         'custom-gradient': 'linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,161,0,1) 100%); ',
-        'usecase-gradient': 'linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,161,0,0.13778011204481788) 100%)',
+        'usecase-gradient': 'linear-gradient(269.86deg, rgba(231, 183, 100, 0.1) 20.93%, rgba(0, 0, 0, 0.1) 100.8%);',
         'usecase-gradient2': 'linear-gradient(90deg, rgba(1,108,140,1) 0%, rgba(1,56,73,1) 50%, rgba(0,0,0,1) 100%)',
         
  

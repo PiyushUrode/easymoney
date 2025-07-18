@@ -1,5 +1,4 @@
 
-import tokenchart from "../assets/tokenomics/tokenchart.png";
 import '../index.css'; // Make sure your .cardsbg CSS is in this file
 import S7AmeriVideo from "../Homepagesection/S7AmeriVideo"
 
@@ -15,7 +14,7 @@ const tokenData = [
 const TokenGrowth = () => {
   return (
     <>  
-    <div className='flex flex-col items-center text-center px-1 md:px-4 py-14 bg-black text-gold'>
+    <div className='flex flex-col items-center text-center px-1 md:px-4  bg-black text-gold'>
       {/* Headline */}
       <div className='mb-8 max-w-2xl justify-items-center text-center'>
         <h1 className='text-xl  font-bold text-[#E7B764] mb-3 leading-tight'>
@@ -27,9 +26,7 @@ const TokenGrowth = () => {
       </div>
 
       {/* Token Chart */}
-      <div className='w-full py-10 max-w-screen-xl mb-12 px-4 border border-[#4A4A4A]'>
-        <img src={tokenchart} alt="Token Chart" className='mx-auto w-full max-w-3xl h-auto' />
-      </div>
+     
 
       {/* Token Data */}
       <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-screen-xl w-full px-4'>

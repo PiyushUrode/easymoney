@@ -5,23 +5,18 @@ import { Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/autoplay'
 
-import Str1 from "../assets/partners/img1.png"
-import Str2 from "../assets/partners/img2.png"
-import Str3 from "../assets/partners/img3.png"
-import Str4 from "../assets/partners/img4.png"
-import Str5 from "../assets/partners/img5.png"
-import Str6 from "../assets/partners/img6.png"
+import Str1 from "../assets/partners/c1.png"
+import Str2 from "../assets/partners/c2.png"
+import Str3 from "../assets/partners/c3.png"
+import Str4 from "../assets/partners/c4.png"
+import Str5 from "../assets/partners/c5.png"
+import Str6 from "../assets/partners/c6.png"
 
 const logos = [Str1, Str2, Str3, Str4, Str5, Str6]
 
 const S4Partners = () => {
   return (
-    <div className="py-10 flex flex-col items-center text-center bg-black">
-      {/* Responsive heading */}
-      <h1 className="text-center text-xl sm:text-2xl md:text-4xl font-montserrat font-bold text-gradient-gold mb-12 tracking-wide">
-        STRATEGIC PARTNERS
-      </h1>
-
+    <div className="py-4 flex flex-col items-center text-center bg-usecase-gradient">
       {/* Swiper */}
       <Swiper
         modules={[Autoplay]}

@@ -2,6 +2,7 @@ import React from "react";
 import heroimg from "../assets/hero/hero1.png";
 import herovideo from "../assets/video/herovideo.mp4";
 import icon from "../assets/hero/AMERICOINTEXT.png"; 
+import S4Partners from "./S4Partners";
 
 const S1Hero = () => {
   return (
@@ -51,8 +52,9 @@ const S1Hero = () => {
       </div>
 
 
-            <div className="w-full h-10 bg-black absolute bottom-0 left-0  hidden md:block backdrop-blur-2xl  "></div>
+            {/* <div className="w-full h-10 bg-black absolute bottom-0 left-0  hidden md:block backdrop-blur-2xl  "></div> */}
       {/* Bottom Blur Strip */}
+
 
     </section>
 
