@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import "../index.css";
 import logo from "../assets/logo/logo_hr_lght.png";
 
-import footericon1 from "../assets/footer/f1.png";
 
-import footericon2 from "../assets/footer/f2.png";
-import footericon3 from "../assets/footer/f3.png";
-import footericon4 from "../assets/footer/f4.png";
-import footericon5 from "../assets/footer/f5.png";
-import footericon6 from "../assets/footer/f6.png"
+import footericon1 from "../assets/footer/f1.webp";
+import footericon2 from "../assets/footer/f2.webp";
+import footericon3 from "../assets/footer/f3.webp";
+import footericon4 from "../assets/footer/f4.webp";
+import footericon5 from "../assets/footer/f5.webp";
+import footericon6 from "../assets/footer/f6.webp"
 
 import { IoIosArrowDropup } from "react-icons/io";
 

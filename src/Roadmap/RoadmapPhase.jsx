@@ -1,12 +1,11 @@
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import S7AmeriVideo from "../Homepagesection/S7AmeriVideo";
 
-import imgQ3 from "../assets/roadmap/phase1.png";
-import imgQ4 from "../assets/roadmap/phase2.png";
-import imgQ1 from "../assets/roadmap/phase3.png";
-import imgQ2 from "../assets/roadmap/phase4.png";
+import imgQ3 from "../assets/roadmap/phase1.webp";
+import imgQ4 from "../assets/roadmap/phase2.webp";
+import imgQ1 from "../assets/roadmap/phase3.webp";
+import imgQ2 from "../assets/roadmap/phase5.webp";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -53,66 +52,103 @@ const cards = [
   },
 ];
 
-const RoadmapCard = ({ quarter, title, points, image, index }) => {
-  const cardRef = useRef();
+const RoadmapPhase = () => {
+  const containerRef = useRef(null);
+  const cardsRef = useRef([]);
+  cardsRef.current = [];
 
-  useEffect(() => {
-    const el = cardRef.current;
-    gsap.fromTo(
-      el,
-      {
-        opacity: 0,
-        y: 50,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        ease: "power2.out",
+  const addToRefs = (el) => {
+    if (el && !cardsRef.current.includes(el)) {
+      cardsRef.current.push(el);
+    }
+  };
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      cardsRef.current.forEach((card) => {
+        gsap.set(card, {
+          yPercent: 100,
+          opacity: 0,
+        });
+      });
+
+      const tl = gsap.timeline({
         scrollTrigger: {
-          trigger: el,
-          start: "top 85%",
-          toggleActions: "play none none reverse",
+          trigger: containerRef.current,
+          start: "top top",
+          end: `+=${cardsRef.current.length * 100}%`,
+          scrub: 1,
+          pin: true,
+          anticipatePin: 1,
+          markers: false,
         },
-      }
-    );
+      });
+
+      cardsRef.current.forEach((card) => {
+        tl.to(
+          card,
+          {
+            yPercent: 0,
+            opacity: 1,
+            duration: 4,
+            ease: "power2.out",
+          },
+          ">-0.8"
+        );
+      });
+    }, containerRef);
+
+    return () => ctx.revert();
   }, []);
 
   return (
-    <div
-      ref={cardRef}
-      className="roadmap-card bg-black text-white border border-[#E7B764] rounded-md p-2 md:p-6 py-10 flex flex-col lg:flex-row items-center gap-10 mb-10"
+    <section
+      ref={containerRef}
+      className="relative w-full h-screen bg-[#0e0e0e] overflow-hidden"
     >
-      <div className="lg:w-1/2 space-y-2 gap-2 flex flex-col md:space-y-4">
-        <h2 className="text-md md:text-5xl font-bold text-[#E7B764]">
-          {quarter}
-        </h2>
-        <h3 className="text-sm md:text-lg font-semibold text-[#E7B764] underline">
-          {title}
-        </h3>
-        <ul className="list-disc list-inside text-xs md:text-sm space-y-1 text-white font-montserrat font-medium">
-          {points.map((point, i) => (
-            <li key={i}>{point}</li>
-          ))}
-        </ul>
-      </div>
-      <div className="lg:w-1/2 mt-6 md:mt-0 flex justify-center items-center">
-        <img src={image} alt={quarter} className="lg:max-w-xl" />
-      </div>
-    </div>
-  );
-};
+      {/* Roadmap Heading */}
+      <h2 className="absolute top-0 w-full text-center text-2xl md:text-4xl font-semibold text-[#E7B764] py-6 z-20">
+        Roadmap
+      </h2>
 
-const RoadmapPhase = () => {
-  return (
-    <>
-      <section className="bg-[#0e0e0e] px-6 py-10 md:px-20 w-full">
-        {cards.map((card, index) => (
-          <RoadmapCard key={index} index={index} {...card} />
+      {/* Cards Container */}
+      <div className="relative w-full h-full  flex flex-col items-center justify-center">
+        {cards.map((card, i) => (
+          <div
+            key={i}
+            ref={addToRefs}
+            className="absolute top-0 left-0 w-full h-full flex items-center justify-center px-4 md:px-10 py-10"
+          >
+            <div className="bg-[#111111] text-white border border-[#E7B764] rounded-lg p-4 md:p-8 w-full h-[400px] max-w-full flex flex-col lg:flex-row gap-8 items-center">
+              {/* Left: Text */}
+              <div className="lg:w-1/2  space-y-2">
+                <h2 className="text-lg md:text-4xl font-bold text-[#E7B764]">
+                  {card.quarter}
+                </h2>
+                <h3 className="text-md md:text-xl font-semibold text-[#E7B764] underline">
+                  {card.title}
+                </h3>
+                <ul className="list-disc pl-5 text-sm md:text-base font-montserrat font-medium">
+                  {card.points.map((point, idx) => (
+                    <li key={idx}>{point}</li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Right: Image */}
+              <div className="lg:w-1/2 flex justify-center items-center">
+                <img
+                  src={card.image}
+                  loading="lazy"
+                  alt={card.quarter}
+                  className="w-full max-w-sm md:max-w-lg rounded-md object-contain"
+                />
+              </div>
+            </div>
+          </div>
         ))}
-      </section>
-      <S7AmeriVideo />
-    </>
+      </div>
+    </section>
   );
 };
 

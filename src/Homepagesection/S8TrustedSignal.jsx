@@ -1,5 +1,5 @@
 import React from 'react';
-import T1 from "../assets/contract/Solidproff.png"; // Your image path
+import T1 from "../assets/contract/Solidproff.webp"; // Your image path
 
 const S8TrustedSignal = () => {
   return (
@@ -20,6 +20,7 @@ const S8TrustedSignal = () => {
         <img
           src={T1}
           alt="Solid Proof"
+          loading="lazy"
           className="w-28 md:w-48 object-contain"
         />
 

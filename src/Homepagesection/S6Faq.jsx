@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import { FaPlus, FaMinus } from 'react-icons/fa'
-import QuestionMark from '../assets/faq/faq1.png'
-import Americoinvideo from "../assets/faq/americoinvideo.mp4"
-import Buildingvideo from "../assets/faq/building.mp4"
+import QuestionMark from '../assets/faq/faq1.webp'
+
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay } from 'swiper/modules'
 
@@ -98,6 +97,7 @@ const S6Faq = () => {
             <img
               src={QuestionMark}
               alt="question mark"
+              loading="lazy"
               className="w-auto pointer-events-none opacity-80"
             />
           </div>

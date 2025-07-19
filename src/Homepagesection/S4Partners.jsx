@@ -5,12 +5,12 @@ import { Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/autoplay'
 
-import Str1 from "../assets/partners/c1.png"
-import Str2 from "../assets/partners/c2.png"
-import Str3 from "../assets/partners/c3.png"
-import Str4 from "../assets/partners/c4.png"
-import Str5 from "../assets/partners/c5.png"
-import Str6 from "../assets/partners/c6.png"
+import Str1 from "../assets/partners/c1.webp"
+import Str2 from "../assets/partners/c2.webp"
+import Str3 from "../assets/partners/c3.webp"
+import Str4 from "../assets/partners/c4.webp"
+import Str5 from "../assets/partners/c5.webp"
+import Str6 from "../assets/partners/c6.webp"
 
 const logos = [Str1, Str2, Str3, Str4, Str5, Str6]
 
@@ -37,6 +37,7 @@ const S4Partners = () => {
           <SwiperSlide key={index} className="flex justify-center items-center">
             <img
               src={logo}
+              loading="lazy"
               alt={`partner-${index}`}
               className="object-contain w-48"  />
           </SwiperSlide>

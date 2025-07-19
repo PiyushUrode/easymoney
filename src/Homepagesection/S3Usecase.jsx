@@ -1,13 +1,13 @@
-import  { useRef, useLayoutEffect } from 'react';
+import { useRef, useLayoutEffect, useState, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-import usecase1 from '../assets/usecases/usecase1.png';
-import usecase2 from '../assets/usecases/usecase2.png';
-import usecase3 from '../assets/usecases/usecase3.png';
-import usecase4 from '../assets/usecases/usecase4.png';
-import usecase5 from '../assets/usecases/usecase5.png';
-import usecase6 from '../assets/usecases/usecase6.png' ;
+import usecase1 from '../assets/usecases/usecase1.webp';
+import usecase2 from '../assets/usecases/usecase2.webp';
+import usecase3 from '../assets/usecases/usecase3.webp';
+import usecase4 from '../assets/usecases/usecase4.webp';
+import usecase5 from "../assets/usecases/usecase5.webp"
+import usecase6 from '../assets/usecases/usecase6.webp';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,14 +18,28 @@ const S3Usecase = () => {
   const cardsRef = useRef([]);
   cardsRef.current = [];
 
+  const [imagesLoaded, setImagesLoaded] = useState(0);
+
+  const addToRefs = (el) => {
+    if (el && !cardsRef.current.includes(el)) {
+      cardsRef.current.push(el);
+    }
+  };
+
+  // 👇 This ensures all images are fully loaded
+  useEffect(() => {
+    if (imagesLoaded === usecases.length) {
+      ScrollTrigger.refresh(); // ✅ Refresh scroll trigger after all images load
+    }
+  }, [imagesLoaded]);
+
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-
+      // Initial state
       cardsRef.current.forEach((card) => {
-
         gsap.set(card, {
-          xPercent: 0, 
-          yPercent: 100, // Sirf neeche se
+          xPercent: 0,
+          yPercent: 100,
           opacity: 0,
         });
       });
@@ -38,11 +52,10 @@ const S3Usecase = () => {
           scrub: 1,
           pin: true,
           anticipatePin: 2,
-          markers: false,
+          markers: false, // ✅ set to true for debug
         },
       });
 
-      // Har card ko uski final position par animate karein
       cardsRef.current.forEach((card) => {
         timeline.to(
           card,
@@ -58,66 +71,52 @@ const S3Usecase = () => {
       });
     }, containerRef);
 
-    // Best cleanup practice
     return () => ctx.revert();
   }, []);
 
-  const addToRefs = (el) => {
-    if (el && !cardsRef.current.includes(el)) {
-      cardsRef.current.push(el);
-    }
-  };
-
   return (
-
     <>
       <div className="relative w-full h-full flex flex-col justify-center items-center">
         <h1
           id="usecase"
-          className="absolute top-0 w-full text-center z-20 font-montserrat font-medium text-xl sm:text-2xl md:text-4xl uppercase text-gradient-gold py-10 md:py-5 "
+          className="absolute top-0 w-full text-center z-20 font-montserrat font-medium text-xl sm:text-2xl md:text-4xl uppercase text-gradient-gold py-10 md:py-5"
         >
           Use Cases
         </h1>
-        </div>
-   
-    <div
-      className="relative w-full h-screen lg::p-10 bg-black overflow-hidden"
-      ref={containerRef}
-    >
+      </div>
 
-
-
-
-      
-      <div className="relative w-full h-full flex flex-col py-7 justify-center items-center">
-    
-
-        <div className="w-full h-full relative">
-          {usecases.map((img, i) => (
-            <div
-              key={i}
-              ref={addToRefs}
-
-            className={`absolute top-10 left- w-full h-full   flex items-center p-4  
-  ${
-
-    window.innerWidth < 768 
-      ? 'justify-center' // On small screens, always center horizontally
-      : i % 2 === 0 ? 'justify-start' : 'justify-end'
-  }`
-}
-            >
-              <img
-                src={img}
-                alt={`usecase-${i}`}
-                className="max-h-[100%] w-auto max-w-[100%] md:max-w-[70%] xl:max-w-[80%] lg:px-14   object-contain  rounded-lg drop-shadow-lg"
-              />
-            </div>
-          ))}
+      <div
+        className="relative w-full h-screen bg-black overflow-hidden"
+        ref={containerRef}
+      >
+        <div className="relative w-full h-full flex flex-col py-7 justify-center items-center">
+          <div className="w-full h-full relative">
+            {usecases.map((img, i) => (
+              <div
+                key={i}
+                ref={addToRefs}
+                className={`absolute top-10 w-full h-full flex items-center p-4 ${
+                  window.innerWidth < 768
+                    ? 'justify-center'
+                    : i % 2 === 0
+                    ? 'justify-start'
+                    : 'justify-end'
+                }`}
+              >
+                <img
+                  src={img}
+                  alt={`usecase-${i}`}
+                  loading="lazy"
+                  decoding="async"
+                  onLoad={() => setImagesLoaded((prev) => prev + 1)} // ✅ Count loaded images
+                  className="max-h-[100%] w-auto max-w-[100%] md:max-w-[70%] xl:max-w-[80%] lg:px-14 object-contain rounded-lg drop-shadow-lg"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
-     </>
+    </>
   );
 };
 

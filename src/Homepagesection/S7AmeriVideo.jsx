@@ -1,6 +1,6 @@
-import amerilogo from "../assets/logo/logo_hr_lght.png";
-import Buildingvideo from "../assets/faq/building.mp4";
-import ameritext from "../assets/video/ameritext.mp4"
+
+import Buildingvideo from "../assets/video/building.webm";
+import ameritext from "../assets/video/ameritext.webm"
 
 import 'swiper/css';
 import 'swiper/css/autoplay';

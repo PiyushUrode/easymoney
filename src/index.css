@@ -30,6 +30,7 @@
   font-family: 'Cinzel';
   font-style: normal;
   src: url('../src/assets/font/Cinzel/Cinzel-VariableFont_wght.ttf') format('truetype');
+  font-display: swap;
 }
 
 
@@ -38,42 +39,49 @@
   font-family: 'Montserrat';
   font-style: normal;
   src: url('../src/assets/font/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'gilroyB';
   font-style: normal;
   src: url('../src/assets/font/gilroy-bold/Gilroy-Bold.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'gilroyH';
   font-style: normal;
   src: url('../src/assets/font/gilroy-bold/Gilroy-Heavy.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'gilroyR';
   font-style: normal;
   src: url('../src/assets/font/gilroy-bold/Gilroy-Regular.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'gilroyM';
   font-style: normal;
   src: url('../src/assets/font/gilroy-bold/Gilroy-Medium.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'gilroyL';
   font-style: normal;
   src: url('../src/assets/font/gilroy-bold/Gilroy-Light.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'latoB';
   font-style: normal;
   src: url('../src/assets/font/Lato/Lato-Bold.ttf') format('truetype');
+  font-display: swap;
 }
 
 body {
@@ -143,21 +151,21 @@ footer {
 }
 
 .faq-background {
-  background-image: url('./assets/faq/faqbg.png'); /* Webpack/Vite resolves this path automatically */
+  background-image: url('./assets/faq/faqbg.webp'); /* Webpack/Vite resolves this path automatically */
   background-size: contain;
 
   background-repeat: no-repeat;
 }
 
 .contract-bg {
-  background-image: url('./assets/contract/bg-contract.png'); /* Webpack/Vite resolves this path automatically */
+  background-image: url('./assets/contract/bg-contract.webp'); /* Webpack/Vite resolves this path automatically */
   background-size: cover;
 
   background-repeat: no-repeat;
 }
 
 .cardsbg {
-  background-image: url('./assets/tokenomics/cardsize.png'); /* adjust path based on project */
+  background-image: url('./assets/tokenomics/cardsize.webp'); /* adjust path based on project */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

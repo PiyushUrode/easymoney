@@ -1,44 +1,50 @@
-
-import heroimg from "../assets/roadmap/ameriicon.png";
-import herovideo from "../assets/video/Roadmap.mp4";
-import icon from "../assets/roadmap/roadmap_text.png";
+import heroimg from "../assets/roadmap/ameriicon.webp";
+import herovideo from "../assets/video/Roadmap.webm";
+import icon from "../assets/roadmap/roadmap_text.webp";
 
 const Roadmaphero = () => {
   return (
-    <section className="relative w-full flex flex-col justify-center align-middle items-center -z-10 overflow-hidden">
-      {/* Video Background */}
+    <section className="relative w-full flex flex-col items-center justify-center overflow-hidden -z-30 ">
+      {/* Background Video */}
       <video
         autoPlay
         muted
         loop
+        preload="metadata"
         playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover -z-10 opacity-40"
+        className="absolute top-0 left-0 w-full h-full object-cover -z-10 opacity-30"
       >
         <source src={herovideo} type="video/mp4" />
       </video>
 
-      {/* Dark Overlay for better text visibility */}
-      {/* <div className="absolute top-0 left-0 w-full h-full bg-black/60 z-[1]" /> */}
-
       {/* Overlay Content */}
-      <div className="relative  w-full h-full flex flex-col justify-between items-center py-10 lg:py-20 px-4">
+      <div className="relative z-10 w-full max-w-7xl px-4 py-16 lg:py-24 flex flex-col items-center justify-center text-center">
         
-        {/* Top Content */}
-        <div className="flex flex-col items-center text-center w-full">
-          <img src={icon} alt="Roadmap Text" className="w-auto h-auto   md:max-w-xl mb-6" />
-          <img
-            src={heroimg}
-            alt="Golden City Skyline"
-            className="w-full max-w-full lg:max-w-xl object-contain"
-          />
-        </div>
+        {/* Title Icon */}
+        <img
+          src={icon}
+          alt="Roadmap Text"
+          width={600}
+          height={120}
+          loading="lazy"
+          className="max-w-full h-auto mb-6"
+        />
 
-        {/* H1 Text */}
-        <div className="pt-10 px-4 w-full flex justify-center">
-          <h1 className="text-base sm:text-lg md:text-xl text-white font-montserrat font-normal max-w-2xl text-center leading-relaxed capitalize">
-            AmeriCoin offers income-sharing, staking rewards, and governance rights—backed by premium properties in Dubai and India.
-          </h1>
-        </div>
+        {/* Hero Image */}
+        <img
+          src={heroimg}
+          alt="Golden City Skyline"
+          width={600}
+          height={300}
+          loading="lazy"
+          className="max-w-full h-auto object-contain"
+        />
+
+        {/* Heading Text */}
+        <h1 className="mt-10 text-base sm:text-lg md:text-xl text-white font-montserrat font-normal max-w-3xl leading-relaxed">
+          AmeriCoin offers income-sharing, staking rewards, and governance rights—
+          backed by premium properties in Dubai and India.
+        </h1>
       </div>
     </section>
   );

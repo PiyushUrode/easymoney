@@ -1,8 +1,8 @@
 import React from "react";
 import { FiArrowUpRight } from "react-icons/fi";
-import ab1 from "../assets/About/About1.png";
-import ab2 from "../assets/About/about2.png";
-import ab3 from "../assets/About/about3.png";
+import ab1 from "../assets/About/About1.webp";
+import ab2 from "../assets/About/about2.webp";
+import ab3 from "../assets/About/about3.webp";
 import "../index.css"; // where your .text-gradient-gold class is defined
 import S4Partners from "./S4Partners";
 
@@ -47,12 +47,12 @@ const AboutUs = () => {
 
   {/* CARD 2 - ID 2 */}
   <div className="order-2 sm:order-none bg-[#1c1c1c] min-w-[300px]" id="2">
-    <img src={ab1} alt="Passive Income" className="w-full h-full object-cover" />
+    <img src={ab1} alt="Passive Income" className="w-full h-full object-cover"  loading="lazy" decoding="async" />
   </div>
 
   {/* CARD 3 - ID 3 (we want it to appear after ID 4 on mobile) */}
   <div className="order-4 sm:order-none bg-[#1c1c1c] min-w-[300px]" id="3">
-    <img src={ab2} alt="Passive Income" className="w-full h-full object-cover" />
+    <img src={ab2} alt="Passive Income" className="w-full h-full object-cover" loading="lazy" decoding="async" />
   </div>
 
   {/* CARD 4 - ID 4 (should appear before ID 3 on mobile) */}
@@ -73,7 +73,7 @@ const AboutUs = () => {
 
   {/* CARD 6 - ID 6 */}
   <div className="order-6 sm:order-none bg-[#1c1c1c] min-w-[300px]" id="6">
-    <img src={ab3} alt="Passive Income" className="w-full h-full object-cover" />
+    <img src={ab3} alt="Passive Income" className="w-full h-full object-cover" loading="lazy" decoding="async" />
   </div>
 </div>
 
