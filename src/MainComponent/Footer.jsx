@@ -4,12 +4,10 @@ import "../index.css";
 import logo from "../assets/logo/logo_hr_lght.png";
 
 
-import footericon1 from "../assets/footer/f1.webp";
-import footericon2 from "../assets/footer/f2.webp";
-import footericon3 from "../assets/footer/f3.webp";
-import footericon4 from "../assets/footer/f4.webp";
-import footericon5 from "../assets/footer/f5.webp";
-import footericon6 from "../assets/footer/f6.webp"
+import footericon1 from "../assets/footer/f1.png";
+import footericon2 from "../assets/footer/f2.png";
+import footericon3 from "../assets/footer/f3.png";
+import footericon4 from "../assets/footer/f4.png";
 
 import { IoIosArrowDropup } from "react-icons/io";
 
@@ -41,25 +39,27 @@ const Footer = () => {
 
   return (
     <>
+       
+      <footer className="bg-black z-10 border-[#FFA200] border-t-2 rounded-2xl relative ">
+<div className="absolute top-[0%] right-0 w-40 h-40 hidden sm:block   bg-[#ffa2008f] rounded-full blur-3xl translate-y-[-50%]"></div>
 
-      <footer className="bg-black z-10 border-[#FFA200] border-t-2 rounded-2xl ">
-        <div className="mx-auto w-full max-w-screen-2xl px-3 md:px-10  py-6 lg:py-8 z-10 gap-3 flex flex-col">
-        <div className="flex flex-wrap justify-between items-center md:items-start w-full p-6  sm:gap-5  z-10">
+        <div className=" w-full max-w-full px-3   py-6 lg:py-8 z-10 gap-3 flex flex-col">
+        <div className="flex flex-wrap justify-between items-center md:items-start w-full p-6    z-10">
   {/* Left Section */}
-  <div className="flex flex-col gap-6 md:gap-4 max-w-full  sm:max-w-[100%] pb-2 md:max-w-[27%]  text-center md:text-left tablet:text-center">
+  <div className="flex flex-col gap-6 md:gap-4 max-w-full  sm:max-w-[100%] pb-2 md:max-w-[30%]  text-center md:text-left tablet:text-center">
         {/* Logo Section */}
     
       <Link to="/" className="flex justify-center md:justify-start items-center">
         <img src={logo} className="h-10" alt="" />
       </Link>
-    <p className="text-[#DADADA] text-base pl-3 font-gilroyR  font-medium">
-The Americoin Project combines the enduring value of real state with the transformative power of blockchain technology. With innovative use cases and a clear vision, we’re redefining the way you invest in and interact with gold.
+    <p className="text-[#DADADA] text-md font-medium font-montserrat">
+The EMGT Project combines the power of blockchain with real-world income opportunities. Through staking, cashback, partner utilities, and a secure token economy, EMGT is redefining how people earn, spend, and grow their digital assets — all in one ecosystem.
     </p>
 
 
   </div>
 
-  {/* Links Section */}
+  {/* right Section */}
   <div className="flex flex-wrap justify-evenly md:justify-end w-full md:w-auto gap-8 md:gap-8 lg:gap-12 xl:gap-16  mt-10 sm:mt-2">
     
     {/* Important Links */}
@@ -95,12 +95,12 @@ The Americoin Project combines the enduring value of real state with the transfo
        <h1 className=" mb-4 font-medium text-sm md:text-base justify-center text-center md:text-left  uppercase text-[#E7B764]" > Contact Us</h1>
        <div className=" text-white  flex flex-col gap-3 text-sm  xl:text-base justify-center text-center md:text-left ">
         <h1 className=" text-white  font-light"> Address : [Inser Company Address]</h1>
-        <h1 className=" text-white  font-light">Email : Support@ameri-crypto.com</h1>
+        <h1 className=" text-white  font-light">Email : Support@EasyMoney.com</h1>
         <h1 className=" text-white  font-light">Phone : [Insert Phone Number]</h1>
        </div>
       </div>
       <div>  
-      <h2 className="mb-4 font-semibold text-sm md:text-base   uppercase justify-center text-center md:text-left  text-white ">
+      <h2 className="mb-4 font-semibold text-sm    uppercase justify-center text-center md:text-left  text-white ">
 Follow us on social platform’s      </h2>
     <div className="flex justify-start space-x-3 lg:space-x-3">
       <a href="/" target="_blank" rel="noopener noreferrer">
@@ -115,12 +115,7 @@ Follow us on social platform’s      </h2>
       <a href="/" target="_blank" rel="noopener noreferrer">
         <img src={footericon4} alt="Twitter" className="w-7 transition-transform hover:scale-110 duration-300" />
       </a>
-            <a href="/" target="_blank" rel="noopener noreferrer">
-        <img src={footericon5} alt="Twitter" className="w-7 transition-transform hover:scale-110 duration-300" />
-      </a>
-        <a href="/" target="_blank" rel="noopener noreferrer">
-        <img src={footericon6} alt="Discord" className="w-7 transition-transform hover:scale-110 duration-300" />
-      </a>
+          
     </div>
     </div>
     </div>
@@ -135,7 +130,7 @@ Follow us on social platform’s      </h2>
 
           <div className="flex flex-row items-center tablet:text-center justify-between px-4">
             <span className="text-sm sm:text-center text-[#ffffff]">
-            <span className="text-[#E7B764]">    © {currentYear} Americoin .  </span>    All Rights Reserved.
+            <span className="text-[#E7B764]">    © {currentYear} EMGT.  </span>    All Rights Reserved.
             </span>
             <button onClick={scrollToTop}>
               <IoIosArrowDropup className="w-10 h-10 text-white" />

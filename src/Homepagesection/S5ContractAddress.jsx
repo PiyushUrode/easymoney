@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-
+import "../index.css"
+import { IoCopy } from "react-icons/io5";
 const S5ContractAddress = () => {
-  const address = "0xe8Bf85474036cB45BE8544E61c217B931DC55D92"
+  const address = "0x628cA0F0e20fA75acc84F1131538B97E3023B1C5"
   const [copied, setCopied] = useState(false)
 
   const handleCopy = () => {
@@ -11,31 +12,32 @@ const S5ContractAddress = () => {
   }
 
   return (
-    <div className="w-full contract-bg text-white py-16 px-4 flex flex-col items-center">
+    <div className="w-full  text-white py-16 px-4 flex flex-col items-center gap-5">
+
+      <div className='w-full max-w-5xl contract-gradient  text-white py-5 px-4  flex flex-col items-center gap-5 '>  
       {/* Title */}
-      <h2 className=" text-xl sm:text-2xl md:text-4xl font-bold text-center text-gradient-gold mb-6">
+      <h2 className=" text-xl sm:text-2xl  font-bold text-center text-white ">
         CONTRACT ADDRESS
       </h2>
 
-      {/* Description */}
-      <p className="text-center text-sm sm:text-base max-w-2xl mb-10">
-        Get a clear and detailed overview of <span className="text-yellow-400">Ameri Coin (AMERI)</span> Token’s supply, allocation, and distribution strategy
-      </p>
+
 
       {/* Address Box */}
-      <div className="border border-yellow-400 rounded-3xl p-6 w-full max-w-3xl text-center">
-        <div className="bg-yellow-400 text-black font-medium rounded-xl px-4 py-3 mb-4 overflow-hidden text-xs sm:text-base">
+      <div className="  w-full max-w-3xl text-center contractaddress-gradient">
+        <div className=" text-white font-medium rounded-xl  overflow-hidden text-base md:text-2xl  sm:text-base">
           {address}
         </div>
+      </div>
 
-        {/* Copy Button */}
+<div>         {/* Copy Button */}
         <button
           onClick={handleCopy}
-          className="border border-yellow-400 text-white px-6 py-2 rounded-md text-sm hover:bg-yellow-500 hover:text-black transition-all"
+          className="border border-white bg-[#FFA10033] flex flex-row gap-5 text-white px-4 py-2 rounded-full text-sm hover:bg-yellow-500 hover:text-black transition-all"
         >
-          {copied ? "Copied!" : "Copy Address"}
-        </button>
-      </div>
+          {copied ? "Copied!" : "Copy Address"} <IoCopy size={20} />
+        </button> </div>
+
+    </div>
     </div>
   )
 }

@@ -7,9 +7,9 @@ import ErrorBoundary from './MainComponent/ErrorBoundary';
 
 // Lazy loaded components with chunk names for better debugging
 
-const Homepage = lazy(() => import(/* webpackChunkName: "Homepage" */ './MainComponent/Homepage'));
-const Roadmap = lazy(() => import(/* webpackChunkName: "Roadmap" */ './MainComponent/Roadmap'));
-const Tokenomics = lazy(() => import(/* webpackChunkName: "Tokenomics" */ './MainComponent/Tokenomics'));
+const Homepage = lazy(() => import( './MainComponent/Homepage'));
+const Commingsoon = lazy(() => import( './MainComponent/commingsoon'));
+
 
 const App = () => {
   return (
@@ -22,8 +22,8 @@ const App = () => {
       <div className="content">
         <Routes>
           <Route path="/" element={<Homepage />} />
-          <Route path="/roadmap" element={<Roadmap />} />
-          <Route path="/tokenomics" element={<Tokenomics />} />
+          <Route path="/commingsoon" element={<Commingsoon />} />
+
         </Routes>
       </div>
 

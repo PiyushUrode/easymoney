@@ -10,7 +10,8 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: rgb(1, 1, 1);
+background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(70, 53, 24, 1) 31%, rgba(72, 57, 28, 1) 63%, rgba(54, 36, 12, 1) 86%, rgba(54, 36, 12, 1) 100%);
+  
 
   --w3m-accent-color: #41d3c5 !important;
   --w3m-background-color: #f019de !important;
@@ -39,6 +40,13 @@
   font-family: 'Montserrat';
   font-style: normal;
   src: url('../src/assets/font/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'openSans';
+  font-style: normal;
+  src: url('../src/assets/font/Open_Sans/static/OpenSans-Bold.ttf') format('truetype');
   font-display: swap;
 }
 
@@ -86,12 +94,16 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  color: #000000;
+ background-image: url('./assets/palkeshbj.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
 }
 
 h1, h2, h3, h4, h5 {
   font-family: 'Montserrat', sans-serif;
-  color: #042D61;
+  color: #ffff;
   line-height: 1.6;
   font-weight: 600;
 
@@ -110,6 +122,8 @@ html, body {
   padding: 0;
   min-height: 100%;
   overflow-x: hidden;
+background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(70, 53, 24, 1) 31%, rgba(72, 57, 28, 1) 63%, rgba(54, 36, 12, 1) 86%, rgba(54, 36, 12, 1) 100%);
+
   
 
 }
@@ -178,8 +192,24 @@ footer {
 
 
 
+.contract-gradient{
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0%, rgba(254, 190, 14, 0.1) 28.5%, rgba(250, 183, 0, 0.059) 51.5%, rgba(254, 190, 14, 0.1) 71%, rgba(0, 0, 0, 0.1) 100%);
+}
+.contractaddress-gradient{
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.09) 0%, rgba(255, 212, 0, 0.09) 45.5%, rgba(0, 0, 0, 0.09) 100%);
+}
 
+.strategy-partner{
+  background: linear-gradient(90deg, #423211 0%, #140F00 56.5%, #423211 100%);
 
+}
+
+.strategy-partner-h1{
+background: linear-gradient(270deg, #FEBE0E 0%, #FFFFFF 44.9%, #FEBE0E 100%);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 
 .scroll-container {
@@ -213,3 +243,75 @@ background: linear-gradient(269.86deg, rgba(231, 183, 100, 0.1) 20.93%, rgba(0, 
   border-image-slice: 1;
 }
 
+.text-stroke {
+  -webkit-text-stroke: 0.5px #ffffff; /* white outline */
+  color: transparent; /* so only stroke shows */
+}
+
+.text-stroke-faq {
+  -webkit-text-stroke: 0.5px #ffea00; /* white outline */
+  color: rgb(255, 255, 255); /* so only stroke shows */
+}
+
+
+
+
+
+/* Token Box Styles */
+.token-box {
+  background: transparent;
+  min-width: 220px;
+  min-height: 50px;
+  border-radius: 40px;
+ box-shadow: 0px 2px 6px 0px #FFA10066;
+
+  transition: all 0.3s ease;
+}
+
+.token-box:hover {
+  transform: translateY(-2px);
+box-shadow: 0px 0px 6px 0px #FFA10066;
+
+}
+
+/* Label + Value */
+.token-label {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.token-value {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 30px;
+  text-align: center;
+}
+
+
+.token-valueshadow{
+  box-shadow:  0px 0px 12px 0px #FFA100 inset;
+}
+
+.usecasebg{
+  background-image: url('./assets/usecases/bg-usecase.png');
+  background-position: full center;
+  background-size: cover;
+}
+
+.shapecut {
+
+    background-image: url('./assets/usecases/shapecut.png');
+  background-position: full center;
+  background-size: cover;
+}
+
+
+/* Subtle hover rotation/move effect for EMGT coin */
+.coin-hover {
+  transition: transform 0.3s ease-out;
+  transform-style: preserve-3d;
+  will-change: transform;
+}

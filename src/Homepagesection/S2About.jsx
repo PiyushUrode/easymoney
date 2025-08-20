@@ -1,87 +1,97 @@
-import React from "react";
-import { FiArrowUpRight } from "react-icons/fi";
-import ab1 from "../assets/About/About1.webp";
-import ab2 from "../assets/About/about2.webp";
-import ab3 from "../assets/About/about3.webp";
-import "../index.css"; // where your .text-gradient-gold class is defined
-import S4Partners from "./S4Partners";
+import { useEffect } from "react";
+import "../index.css"; 
+import handTechImage from "../assets/About/EMGTCOIN.png"; 
+import abouticon1 from "../assets/About/icon1.png"
 
 const AboutUs = () => {
-  return (
-    <>   
-          <div> <S4Partners /></div>
-   
-    <div className="bg-[#141414] text-white w-full px-4 md:px-10 py-10">
-      <h2  id="about" className="text-center text-xl sm:text-2xl md:text-5xl font-montserrat font-medium text-gradient-gold mb-14 tracking-wide">
-        ABOUT US
-      </h2>
 
-      <div className="grid lg:grid-cols-2 border border-[#4A4A4A] overflow-hidden rounded-xl">
-        {/* Left Panel */}
-        <div className="border-b lg:border-b-0 lg:border-r border-[#4a4a4a] p-6 md:p-10 flex flex-col justify-center items-start text-left space-y-4">
-          <h3 className="text-gradient-gold text-3xl md:text-5xl font-montserrat font-medium max-w-xs">
-            What Is AmeriCoin?
-          </h3>
-          <p className="text-base md:text-xl text-[#d0d0d0] leading-relaxed font-gilroyL max-w-xl tracking-tight">
-            AmeriCoin (AMERI) is a BEP-20 token built on the BNB Smart Chain,
-            designed to revolutionize real estate investment by enabling global
-            access to luxury properties in Dubai and India. Token holders
-            benefit from profit-sharing, staking rewards, and governance rights.
+  useEffect(() => {
+    const coin = document.getElementById("coin");
+
+    const handleMouseMove = (e) => {
+      const rect = coin.getBoundingClientRect();
+      const x = e.clientX - rect.left; // mouse X inside the element
+      const y = e.clientY - rect.top;  // mouse Y inside the element
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      const rotateX = ((y - centerY) / centerY) * 12; // max 10deg
+      const rotateY = ((x - centerX) / centerX) * 12; // max 10deg
+
+      coin.style.transform = `rotateX(${-rotateX}deg) rotateY(${rotateY}deg) translateZ(0)`;
+    };
+
+    const resetTransform = () => {
+      coin.style.transform = "rotateX(0deg) rotateY(0deg)";
+    };
+
+    coin.addEventListener("mousemove", handleMouseMove);
+    coin.addEventListener("mouseleave", resetTransform);
+
+    return () => {
+      coin.removeEventListener("mousemove", handleMouseMove);
+      coin.removeEventListener("mouseleave", resetTransform);
+    };
+  }, []);
+
+  return (
+    <div className=" text-white w-full px-4 md:px-10 lg:px-20 py-14 relative" id="about">
+      <div className="absolute top-0 left-0 w-full h-10 bg-black/0 backdrop-blur-xl z-10" />
+
+      <div className="absolute top-[0%] left-0 w-40 h-40 hidden sm:block bg-[#ffa2008f] rounded-full blur-3xl translate-y-[-50%]"></div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        
+        {/* Left Content */}
+        <div className="space-y-5">
+          <p className="text-[#FFA100] text-sm font-gilroyR">About EMGT</p>
+
+          <h2 className="text-3xl md:text-4xl text-white font-bold leading-snug">
+            Introducing EM Global Token <span className="text-[#FFA100]">(EMGT)</span>
+          </h2>
+
+          <p className="text-gray-300 text-base leading-relaxed">
+            A next-generation token designed for earning, spending, and growing in a unified ecosystem.
           </p>
-          <ul className="list-disc pl-5 space-y-1 text-sm md:text-base text-[#cccccc]">
-            <li>Real-world asset backing</li>
-            <li>Community-driven decision-making</li>
-            <li>Passive income through staking and rentals</li>
-            <li>Scalable and secure BEP-20 token</li>
-          </ul>
+
+          <h3 className="text-[#FFA100] text-lg font-open font-bold tracking-wide">
+            One Ecosystem. Infinite Possibilities.
+          </h3>
+          <p className="text-gray-300 text-sm md:text-base leading-relaxed font-montserrat font-normal">
+            EM Global Token (EMGT) aims to simplify and grow your earnings with real utility, smart automation, 
+            and passive income — creating a sustainable ecosystem where every interaction benefits you.
+          </p>
+
+          <div className="mt-6">
+            <h4 className="text-lg font-semibold text-white mb-3 font-montserrat font-medium">Why EMGT?</h4>
+            <ul className="space-y-2 text-sm md:text-base text-white">
+              <li className="flex items-start gap-2 font-montserrat font-normal">
+                <span className="text-[#FFA100] mt-1"> <img src={abouticon1} alt="" width={20} /> </span> Multi-stream income mode
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-[#FFA100] mt-1"> <img src={abouticon1} alt="" width={20} /> </span> Global partner integration
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-[#FFA100] mt-1"> <img src={abouticon1} alt="" width={20} /> </span> Seamless real-world usage
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-[#FFA100] mt-1"> <img src={abouticon1} alt="" width={20} /> </span> Transparent, decentralized architecture
+              </li>
+            </ul>
+          </div>
         </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-px">
-  {/* CARD 1 - ID 1 */}
-  <div className="order-1 sm:order-none bg-[#1c1c1c] p-5 flex flex-col justify-between min-w-[300px] min-h-[180px]" id="1">
-    <p className="text-base sm:text-lg text-white font-gilroyL mb-4">Real-World Asset Backing</p>
-    <div className="w-10 h-10 border border-white rounded-full flex items-center justify-center">
-      <FiArrowUpRight className="text-white text-lg" />
-    </div>
-  </div>
-
-  {/* CARD 2 - ID 2 */}
-  <div className="order-2 sm:order-none bg-[#1c1c1c] min-w-[300px]" id="2">
-    <img src={ab1} alt="Passive Income" className="w-full h-full object-cover"  loading="lazy" decoding="async" />
-  </div>
-
-  {/* CARD 3 - ID 3 (we want it to appear after ID 4 on mobile) */}
-  <div className="order-4 sm:order-none bg-[#1c1c1c] min-w-[300px]" id="3">
-    <img src={ab2} alt="Passive Income" className="w-full h-full object-cover" loading="lazy" decoding="async" />
-  </div>
-
-  {/* CARD 4 - ID 4 (should appear before ID 3 on mobile) */}
-  <div className="order-3 sm:order-none bg-[#1c1c1c] p-5 flex flex-col justify-between min-h-[180px] min-w-[300px]" id="4">
-    <p className="text-base sm:text-lg text-white font-gilroyL mb-4">Passive income through staking and rentals</p>
-    <div className="w-10 h-10 border border-white rounded-full flex items-center justify-center">
-      <FiArrowUpRight className="text-white text-lg" />
-    </div>
-  </div>
-
-  {/* CARD 5 - ID 5 */}
-  <div className="order-5 sm:order-none bg-[#1c1c1c] p-5 flex flex-col justify-between min-h-[180px] min-w-[300px]" id="5">
-    <p className="text-base sm:text-lg text-white font-gilroyL mb-4">Scalable and secure BEP-20 token</p>
-    <div className="w-10 h-10 border border-white rounded-full flex items-center justify-center">
-      <FiArrowUpRight className="text-white text-lg" />
-    </div>
-  </div>
-
-  {/* CARD 6 - ID 6 */}
-  <div className="order-6 sm:order-none bg-[#1c1c1c] min-w-[300px]" id="6">
-    <img src={ab3} alt="Passive Income" className="w-full h-full object-cover" loading="lazy" decoding="async" />
-  </div>
-</div>
-
-
+        {/* Right Image */}
+        <div className="flex justify-center md:justify-end">
+          <img
+            src={handTechImage}
+            alt="EMGT Technology"
+            className="w-full max-w-md object-contain coin-hover"
+            id="coin"
+          />
+        </div>
       </div>
     </div>
- 
-  </>
   );
 };
 

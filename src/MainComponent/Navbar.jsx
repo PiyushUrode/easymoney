@@ -2,6 +2,7 @@ import { HashLink as Link } from "react-router-hash-link";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../index.css"
+import { MdOutlineArrowOutward } from "react-icons/md";
 import logo from "../assets/logo/logo_hr_lght.png"
 // import Popup from './Popupbuydog';
 
@@ -40,7 +41,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`w-full  pt-3 md:pt-0   overflow-x-hidden z-50 bg-black   top-0 border-b border-none dark:border-gray-600 `}
+      className={`w-full  pt-3 md:pt-0 z-50   overflow-x-hidden  bg-black   top-0 border-b border-none dark:border-gray-600 `}
     >
       <div className="relative max-w-full  flex flex-wrap items-center justify-between mx-auto p-0 px-4 md:p-4 md:px-8">
         {/* Logo */}
@@ -57,19 +58,25 @@ const Navbar = () => {
 
         {/* Right Section */}
         <div className="flex md:order-2 sm:gap-5 space-x-4 md:space-x-0 rtl:space-x-reverse">
-          <div className="flex gap-3 sm:gap-1  items-center bg-gradient-border shadow-md  shadow-md  p-[1px]">
-            <Link smooth to="/" onClick={closeMenu} className="bg-black">
+ <div className="flex flex-row gap-0 sm:gap-1 items-center border-2 p-[2px] rounded-full group">
+  <Link smooth="true" to="/commingsoon">
+    <button
+      className="relative rounded-full text-xs md:text-md px-1 md:px-4 py-1 text-white sm:h-full"
+      onClick={() => navigate("/commingsoon")}
+    >
+      BUY NOW
+    </button>
+  </Link>
 
-                <button
-                  className="relative  rounded-lg   px-4 py-1   text-white   sm:h-full"
-                  onClick={() => navigate("/")}
-                >
-
-                      BUY NOW
-                </button>
-
-            </Link>
-          </div>
+  {/* Icon Animation */}
+  <div
+    className="w-5 md:w-10 h-5 md:h-10 rounded-full bg-white text-black flex justify-center items-center
+               transition-all duration-500 ease-in-out 
+               group-hover:rotate-90 group-hover:scale-110 group-hover:bg-gray-200"
+  >
+    <MdOutlineArrowOutward className="transition-transform duration-500 ease-in-out" />
+  </div>
+</div>
 
           <button
             onClick={toggleNav}
@@ -136,7 +143,7 @@ const Navbar = () => {
             </li>
 
             <li className="relative  group">
-              <Link smooth to="/tokenomics" onClick={closeMenu}>
+              <Link smooth to="/#tokenomics" onClick={closeMenu}>
                 <div className="font-normal block py-2 px-3 text-[#FFFFFFA6] hover:text-white font-semibold hover:bg-gray-700 md:hover:bg-transparent md:p-0 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300 font-outfit">
                   Tokenomics
                 </div>
@@ -146,9 +153,18 @@ const Navbar = () => {
             </li>
 
             <li className="relative  group">
-              <Link smooth to="/roadmap" onClick={closeMenu}>
+              <Link smooth to="/#roadmap" onClick={closeMenu}>
                 <div className="font-normal block py-2 px-3 text-[#FFFFFFA6] hover:text-white font-semibold hover:bg-gray-700 md:hover:bg-transparent md:p-0 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300 font-outfit">
                Roadmap
+                </div>
+
+                <span className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-black via-yellow-500 to-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+              </Link>
+            </li>
+                        <li className="relative  group">
+              <Link smooth to="/#faq" onClick={closeMenu}>
+                <div className="font-normal block py-2 px-3 text-[#FFFFFFA6] hover:text-white font-semibold hover:bg-gray-700 md:hover:bg-transparent md:p-0 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 duration-300 font-outfit">
+               FAQ
                 </div>
 
                 <span className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-black via-yellow-500 to-black scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
@@ -161,6 +177,8 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
+
+<div className="absolute top-0 right-0 w-20 h-40 hidden sm:block   bg-[#FFA100] rounded-full blur-3xl translate-y-[-50%]"></div>
 
 
     </nav>
