@@ -42,10 +42,10 @@ const S1Hero = () => {
 <div className="flex flex-wrap justify-center gap-4">
   {/* Buy Now Button */}
   <div className="flex flex-row gap-0 sm:gap-1 items-center border-2 p-[2px] rounded-full group">
-  <Link smooth="true" to="/commingsoon">
+  <Link smooth="true" to="/presale">
     <button
       className="relative rounded-full text-xs md:text-md px-1 md:px-4 py-1 text-white sm:h-full"
-      onClick={() => navigate("/commingsoon")}
+      onClick={() => navigate("/presale")}
     >
       BUY NOW
     </button>

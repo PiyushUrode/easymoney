@@ -9,6 +9,7 @@ import ErrorBoundary from './MainComponent/ErrorBoundary';
 
 const Homepage = lazy(() => import( './MainComponent/Homepage'));
 const Commingsoon = lazy(() => import( './MainComponent/commingsoon'));
+const Presale = lazy(() => import( './MainComponent/MainPresale'));
 
 
 const App = () => {
@@ -22,7 +23,8 @@ const App = () => {
       <div className="content">
         <Routes>
           <Route path="/" element={<Homepage />} />
-          <Route path="/commingsoon" element={<Commingsoon />} />
+
+          <Route path="/presale" element={<Presale />} />
 
         </Routes>
       </div>

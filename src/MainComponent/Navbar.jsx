@@ -59,10 +59,10 @@ const Navbar = () => {
         {/* Right Section */}
         <div className="flex md:order-2 sm:gap-5 space-x-4 md:space-x-0 rtl:space-x-reverse">
  <div className="flex flex-row gap-0 sm:gap-1 items-center border-2 p-[2px] rounded-full group">
-  <Link smooth="true" to="/commingsoon">
+  <Link smooth="true" to="/presale">
     <button
       className="relative rounded-full text-xs md:text-md px-1 md:px-4 py-1 text-white sm:h-full"
-      onClick={() => navigate("/commingsoon")}
+      onClick={() => navigate("/presale")}
     >
       BUY NOW
     </button>
